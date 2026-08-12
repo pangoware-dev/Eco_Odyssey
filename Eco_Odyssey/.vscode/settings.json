@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Eco_Odyssey_Alpha.slnx"
+    "dotnet.defaultSolution": "Eco_Odyssey.slnx"
 }

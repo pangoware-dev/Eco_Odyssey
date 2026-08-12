@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e842aca06f36d4397658141ff83633, type: 3}
   m_Name: Venora
   m_EditorClassIdentifier: Assembly-CSharp::scrEcoFather
-  Ataque: 18
-  Defesa: 8
-  Vida: 8
+  Ataque: 12
+  Defesa: 10
+  Vida: 10
   Velocidade: 16
   Level: 5
   animControllerEco: {fileID: 9100000, guid: 2b663888c5eed724aa19d11b1679b32a, type: 2}

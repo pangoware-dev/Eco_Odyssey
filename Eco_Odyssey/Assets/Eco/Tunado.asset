@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e842aca06f36d4397658141ff83633, type: 3}
   m_Name: Tunado
   m_EditorClassIdentifier: Assembly-CSharp::scrEcoFather
-  Ataque: 14
-  Defesa: 8
+  Ataque: 12
+  Defesa: 10
   Vida: 8
   Velocidade: 20
   Level: 5

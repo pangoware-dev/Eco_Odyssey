@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41e842aca06f36d4397658141ff83633, type: 3}
-  m_Name: Tartaroa
+  m_Name: Wotter
   m_EditorClassIdentifier: Assembly-CSharp::scrEcoFather
-  Ataque: 8
-  Defesa: 20
-  Vida: 16
-  Velocidade: 6
+  Ataque: 20
+  Defesa: 8
+  Vida: 6
+  Velocidade: 16
   Level: 5
   animControllerEco: {fileID: 9100000, guid: 5de3c2ad913210c40b1e0f739b9d13c5, type: 2}
   nome: Tartaroa

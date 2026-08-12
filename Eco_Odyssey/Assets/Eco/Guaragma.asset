@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e842aca06f36d4397658141ff83633, type: 3}
   m_Name: Guaragma
   m_EditorClassIdentifier: Assembly-CSharp::scrEcoFather
-  Ataque: 16
-  Defesa: 8
-  Vida: 10
-  Velocidade: 16
+  Ataque: 18
+  Defesa: 10
+  Vida: 8
+  Velocidade: 14
   Level: 5
   animControllerEco: {fileID: 9100000, guid: 304e317b3316e3e4a952f7ac95dbd3e8, type: 2}
   nome: Guaragma
