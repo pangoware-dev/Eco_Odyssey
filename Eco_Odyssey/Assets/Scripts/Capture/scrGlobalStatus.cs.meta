@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4e3fbb70a480b82498182368cadcb536
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - currentEco: {instanceID: 0}
+  - animControllerC: {instanceID: 0}
+  - ecoInicial: {fileID: 11400000, guid: 32bd755deb24b844394fead1b8bd3001, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

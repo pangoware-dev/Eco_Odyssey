@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e842aca06f36d4397658141ff83633, type: 3}
+  m_Name: zIncineraja
+  m_EditorClassIdentifier: Assembly-CSharp::scrEcoFather
+  Ataque: 20
+  Defesa: 0
+  Vida: 0
+  Velocidade: 0
+  Level: 40
+  animControllerEco: {fileID: 9100000, guid: e21c5f440c27fa544abf8f550a122b94, type: 2}
+  nome: Incineraja
+  description: MUITO FODAAAAAAAAA
+  Element1: 1
+  Element2: 3
