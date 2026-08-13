@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class scrEHealth : MonoBehaviour
 {
@@ -6,7 +7,11 @@ public class scrEHealth : MonoBehaviour
     public float maxHP;
 
     private scrEnemyEco ecoComp;
-    public float D;
+    private BlinkingSprite blink;
+    public GameObject HealthBar;
+    private Slider healthBarSlider;
+
+    public float D, Damage;
 
     void Start()
     {
@@ -19,21 +24,34 @@ public class scrEHealth : MonoBehaviour
         }
 
         currentHP = maxHP;
+
+        if (blink == null)
+        {
+            blink = gameObject.AddComponent<BlinkingSprite>();
+        }
+        blink = GetComponent<BlinkingSprite>();
+
+        GameObject bar = Instantiate(HealthBar);
+        healthBarSlider = HealthBar.GetComponentInChildren<Slider>();
+    }
+
+    public void FixedUpdate()
+    {
+        healthBarSlider.maxValue = maxHP;
+        healthBarSlider.value = currentHP;
     }
 
     public void changeHP(float amount)
     {
-        currentHP -= amount/(ecoComp.ecoData.Defesa*D)/2+1;
+        Damage = amount/(ecoComp.ecoData.Defesa*D)/2+1;
+        currentHP -= Mathf.CeilToInt(Damage);
 
         Debug.Log("HP Inimigo: " + currentHP);
+        blink.Blink();
 
         if(currentHP > maxHP || currentHP <= 0)
         {
             currentHP = maxHP;
-        }
-        else if(currentHP <= 0)
-        {
-            Destroy(gameObject);
         }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class scrLife : MonoBehaviour
@@ -6,9 +7,14 @@ public class scrLife : MonoBehaviour
     public float MaxHealth, CurrentHealth;
     public TMP_Text HPText;
     public Animator HPTextAnim;
-    scrGlobalStatus globalStatus;
+    private scrGlobalStatus globalStatus;
+
+    public GameObject HealthBar;
+    private Slider healthBarSlider;
+
+    private BlinkingSprite blink;
     public int Defesa;
-    public float D;
+    public float D, Damage;
 
     public void Start()
     {
@@ -21,6 +27,23 @@ public class scrLife : MonoBehaviour
         }
 
         HPText.text = "HP: " + CurrentHealth + "/" + MaxHealth;
+        
+        if (blink == null)
+        {
+            blink = gameObject.AddComponent<BlinkingSprite>();
+        }
+        blink = GetComponent<BlinkingSprite>();
+
+        GameObject bar = Instantiate(HealthBar);
+        healthBarSlider = HealthBar.GetComponentInChildren<Slider>();
+        bar.transform.localPosition = new Vector3(0, 1.5f, 0);
+    }
+
+    public void FixedUpdate()
+    {
+        healthBarSlider.maxValue = MaxHealth;
+        healthBarSlider.value = CurrentHealth;
+        Debug.Log("Pai da barra: " + HealthBar.transform.parent.name);
     }
     
     public void ChangeHealth(int amount)
@@ -28,8 +51,10 @@ public class scrLife : MonoBehaviour
         D = 0.4f;
         Defesa = (int)globalStatus.defC;
         
-        CurrentHealth-=(amount/(Defesa*D)/2)+1;
-        HPTextAnim.Play("HP_Animation");
+        Damage = (amount/(Defesa*D)/2)+1;
+        CurrentHealth-=Mathf.CeilToInt(Damage);
+        HPTextAnim.Play("Text_Pop");
+        blink.Blink();
         HPText.text="HP: "+CurrentHealth+"/"+MaxHealth;
 
         if(CurrentHealth>MaxHealth)

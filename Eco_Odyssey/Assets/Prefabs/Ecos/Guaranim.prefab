@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 7216808184531003600}
   - component: {fileID: 5192969755856219608}
   - component: {fileID: 7338381684852773761}
-  - component: {fileID: 5666129719869734932}
   - component: {fileID: 7516271277472187316}
   - component: {fileID: 3952385781448280322}
   - component: {fileID: 7466580215943503425}
@@ -96,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 6581172667279064316}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -130,7 +129,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1be213321feb97446925e7d27ea50084, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,7 +160,7 @@ SpriteRenderer:
   m_Size: {x: 3.4782608, y: 3.4850543}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &7338381684852773761
 Rigidbody2D:
@@ -190,26 +189,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5666129719869734932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581172667279064316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6aef7a768487e48ac30ef42bed874c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::scrDealDamage
-  damage: 1
-  attackPoint: {fileID: 8919374719009889311}
-  weaponRange: 0.4
-  knockbackForce: 10
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  stunTime: 0.1
 --- !u!58 &7516271277472187316
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -304,7 +283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::scrEHealth
   currentHP: 10
   maxHP: 10
+  HealthBar: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
   D: 0.4
+  Damage: 0
 --- !u!114 &3501984546626255776
 MonoBehaviour:
   m_ObjectHideFlags: 0
