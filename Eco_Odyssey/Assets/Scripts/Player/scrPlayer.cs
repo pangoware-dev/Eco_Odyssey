@@ -48,7 +48,7 @@ public class scrPlayer : MonoBehaviour
         input.Normalize();
     }
 
-    public void HPBarVisibility()
+/*     public void HPBarVisibility()
     {
         if (PlayerMode==1)
         {
@@ -58,7 +58,7 @@ public class scrPlayer : MonoBehaviour
         {
             life.SetHealthBarInvisible();
         }
-    }
+    } */
 
     public void SetDialogue(DialogueSO dialogueSO)
     {
@@ -123,10 +123,12 @@ public class scrPlayer : MonoBehaviour
         if (enemy != null)
         {
             PlayerMode=1;
+            life.SetHealthBarVisible();
         }
         else
         {
             PlayerMode=0;
+            life.SetHealthBarInvisible();
         }
     }
 

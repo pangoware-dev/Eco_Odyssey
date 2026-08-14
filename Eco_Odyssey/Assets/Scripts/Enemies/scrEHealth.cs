@@ -45,13 +45,11 @@ public class scrEHealth : MonoBehaviour
     public void SetHealthBarVisible()
     {
        HPBar.gameObject.SetActive(true);
-       Debug.Log("HP Bar Visible");
     }
 
     public void SetHealthBarInvisible()
     {
         HPBar.gameObject.SetActive(false);
-        Debug.Log("HP Bar Invisible");
     }
 
     public void changeHP(float amount)
