@@ -8,8 +8,8 @@ public class scrEHealth : MonoBehaviour
 
     private scrEnemyEco ecoComp;
     private BlinkingSprite blink;
-    public GameObject HealthBar;
-    private Slider healthBarSlider;
+    public GameObject EnemyHP;
+    private Slider HPBar;
 
     public float D, Damage;
 
@@ -31,14 +31,27 @@ public class scrEHealth : MonoBehaviour
         }
         blink = GetComponent<BlinkingSprite>();
 
-        GameObject bar = Instantiate(HealthBar);
-        healthBarSlider = HealthBar.GetComponentInChildren<Slider>();
+        GameObject bar = Instantiate(EnemyHP, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity, transform);
+        HPBar = bar.GetComponentInChildren<Slider>();
+        HPBar.gameObject.SetActive(false);
     }
 
     public void FixedUpdate()
     {
-        healthBarSlider.maxValue = maxHP;
-        healthBarSlider.value = currentHP;
+        HPBar.maxValue = maxHP;
+        HPBar.value = currentHP;
+    }
+
+    public void SetHealthBarVisible()
+    {
+       HPBar.gameObject.SetActive(true);
+       Debug.Log("HP Bar Visible");
+    }
+
+    public void SetHealthBarInvisible()
+    {
+        HPBar.gameObject.SetActive(false);
+        Debug.Log("HP Bar Invisible");
     }
 
     public void changeHP(float amount)

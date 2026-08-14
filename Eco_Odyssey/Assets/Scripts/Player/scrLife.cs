@@ -9,8 +9,8 @@ public class scrLife : MonoBehaviour
     public Animator HPTextAnim;
     private scrGlobalStatus globalStatus;
 
-    public GameObject HealthBar;
-    private Slider healthBarSlider;
+    public GameObject PlayerHP;
+    private Slider HPBar;
 
     private BlinkingSprite blink;
     public int Defesa;
@@ -34,16 +34,15 @@ public class scrLife : MonoBehaviour
         }
         blink = GetComponent<BlinkingSprite>();
 
-        GameObject bar = Instantiate(HealthBar);
-        healthBarSlider = HealthBar.GetComponentInChildren<Slider>();
-        bar.transform.localPosition = new Vector3(0, 1.5f, 0);
+        GameObject bar = Instantiate(PlayerHP, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity, transform);
+        HPBar = bar.GetComponentInChildren<Slider>();
+        HPBar.gameObject.SetActive(false);
     }
 
     public void FixedUpdate()
     {
-        healthBarSlider.maxValue = MaxHealth;
-        healthBarSlider.value = CurrentHealth;
-        Debug.Log("Pai da barra: " + HealthBar.transform.parent.name);
+        HPBar.maxValue = MaxHealth;
+        HPBar.value = CurrentHealth;
     }
     
     public void ChangeHealth(int amount)
@@ -65,5 +64,17 @@ public class scrLife : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void SetHealthBarVisible()
+    {
+        HPBar.gameObject.SetActive(true);
+        Debug.Log("HP Bar Visible");
+    }
+
+    public void SetHealthBarInvisible()
+    {
+        HPBar.gameObject.SetActive(false);
+        Debug.Log("HP Bar Invisible");
     }
 }

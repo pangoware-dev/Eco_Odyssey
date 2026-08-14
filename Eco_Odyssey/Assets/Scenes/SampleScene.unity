@@ -341,6 +341,10 @@ PrefabInstance:
       value: Cocobara
       objectReference: {fileID: 0}
     - target: {fileID: 4268651827665060257, guid: b705bf222e2f5d04c89c980679809550, type: 3}
+      propertyPath: EnemyHP
+      value: 
+      objectReference: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
+    - target: {fileID: 4268651827665060257, guid: b705bf222e2f5d04c89c980679809550, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
@@ -421,6 +425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2813075544325763564, guid: 81c1aa9f5d29a1c4aaeaa69e9a6cf2f7, type: 3}
+      propertyPath: EnemyHP
+      value: 
+      objectReference: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
     - target: {fileID: 2813075544325763564, guid: 81c1aa9f5d29a1c4aaeaa69e9a6cf2f7, type: 3}
       propertyPath: healthBar
       value: 
@@ -9911,6 +9919,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1608489272334599547, guid: b3326f7de8d89094786eb4e2fa36e968, type: 3}
+      propertyPath: EnemyHP
+      value: 
+      objectReference: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
+    - target: {fileID: 1608489272334599547, guid: b3326f7de8d89094786eb4e2fa36e968, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
@@ -10317,6 +10329,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 188a2dd23e9cd9e40b0e5f94cf0c708b, type: 2}
+    - target: {fileID: 7631353129701562523, guid: 188cbda4277748a43ac0aeddc496a8b6, type: 3}
+      propertyPath: EnemyHP
+      value: 
+      objectReference: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
     - target: {fileID: 7631353129701562523, guid: 188cbda4277748a43ac0aeddc496a8b6, type: 3}
       propertyPath: healthBar
       value: 
@@ -11423,7 +11439,7 @@ MonoBehaviour:
   CurrentHealth: 10
   HPText: {fileID: 483881048}
   HPTextAnim: {fileID: 467076124}
-  HealthBar: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+  PlayerHP: {fileID: 6108660761783692848, guid: 3d4a33f6a3c22754ea54a86423d29445, type: 3}
   Defesa: 0
   D: 0.5
   Damage: 0
@@ -12926,6 +12942,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4134015794055399591, guid: d71bc2d526d286349864ec56e506431c, type: 3}
+      propertyPath: EnemyHP
+      value: 
+      objectReference: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
+    - target: {fileID: 4134015794055399591, guid: d71bc2d526d286349864ec56e506431c, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
@@ -13590,6 +13610,10 @@ PrefabInstance:
       propertyPath: ecoData
       value: 
       objectReference: {fileID: 11400000, guid: 155032d7667d9b6479bf3caa33a8951b, type: 2}
+    - target: {fileID: 2970579166952694250, guid: 37a5d0f71c0ecbf4e89cb434d6dfbef9, type: 3}
+      propertyPath: EnemyHP
+      value: 
+      objectReference: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
     - target: {fileID: 2970579166952694250, guid: 37a5d0f71c0ecbf4e89cb434d6dfbef9, type: 3}
       propertyPath: healthBar
       value: 
