@@ -13,6 +13,7 @@ public class scrPlayer : MonoBehaviour
     public LayerMask enemyLayer;
     public scrAnimationControl ac;
     public DialogueSO currentDialogue;
+    public CircleCollider2D playerCollider;
     private scrLife life;
 
     //public scrPCombat player_Combat;
@@ -46,17 +47,24 @@ public class scrPlayer : MonoBehaviour
             input.y = 0;
         }
         input.Normalize();
+        PlayerModeChange();
     }
 
+<<<<<<< Updated upstream
 /*     public void HPBarVisibility()
+=======
+    public void PlayerModeChange()
+>>>>>>> Stashed changes
     {
         if (PlayerMode==1)
         {
             life.SetHealthBarVisible();
+            playerCollider.offset = new Vector2(0f, 0f);
         }
         else
         {
             life.SetHealthBarInvisible();
+            playerCollider.offset = new Vector2(0f, -0.5f);
         }
     } */
 
