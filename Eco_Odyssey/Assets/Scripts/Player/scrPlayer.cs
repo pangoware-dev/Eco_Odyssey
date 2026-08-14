@@ -13,6 +13,7 @@ public class scrPlayer : MonoBehaviour
     public LayerMask enemyLayer;
     public scrAnimationControl ac;
     public DialogueSO currentDialogue;
+    private scrLife life;
 
     //public scrPCombat player_Combat;
     private bool isKnockedBack;
@@ -47,6 +48,18 @@ public class scrPlayer : MonoBehaviour
         input.Normalize();
     }
 
+    public void HPBarVisibility()
+    {
+        if (PlayerMode==1)
+        {
+            life.SetHealthBarVisible();
+        }
+        else
+        {
+            life.SetHealthBarInvisible();
+        }
+    }
+
     public void SetDialogue(DialogueSO dialogueSO)
     {
         currentDialogue = dialogueSO;
@@ -75,6 +88,7 @@ public class scrPlayer : MonoBehaviour
 
         normalHealth = GetComponent<scrLife>().MaxHealth;
         normalCurrentHealth = GetComponent<scrLife>().CurrentHealth;
+        life = GetComponent<scrLife>();
     }
 
     private void FixedUpdate()
