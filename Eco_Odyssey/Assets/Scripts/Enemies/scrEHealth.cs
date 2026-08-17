@@ -27,6 +27,8 @@ public class scrEHealth : MonoBehaviour{
 
         if (currentHP <= 0){
             Destroy(gameObject);
+        } else if (currentHP>maxHP){
+            currentHP=maxHP;
         }
     }
 }
