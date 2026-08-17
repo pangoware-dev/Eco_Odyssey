@@ -25,9 +25,7 @@ public class scrEHealth : MonoBehaviour{
 
         Debug.Log("HP Inimigo: " + currentHP);
 
-        if (currentHP <= 0){
-            Destroy(gameObject);
-        } else if (currentHP>maxHP){
+        if (currentHP>maxHP||currentHP<=0){
             currentHP=maxHP;
         }
     }
