@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "Eco", menuName ="Eco/Create new eco")]
 public class scrEcoFather : ScriptableObject
 {
-    public float Ataque, Defesa, Vida, Velocidade;
+    public float Ataque, Defesa, Vida, Velocidade, VidaAtual;
     public int Level;
     public RuntimeAnimatorController animControllerEco;
  

@@ -11389,6 +11389,7 @@ MonoBehaviour:
   currentEcoIndex: 0
   currentEco: {fileID: 0}
   vidaC: 0
+  vidaAtual: 0
   atkC: 0
   defC: 0
   veloC: 0
@@ -13659,11 +13660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5974676189528512935, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5974676189528512935, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5974676189528512935, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
       propertyPath: m_LocalPosition.z
