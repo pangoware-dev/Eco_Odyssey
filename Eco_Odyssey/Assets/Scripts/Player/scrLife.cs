@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class scrLife : MonoBehaviour{
@@ -7,11 +8,14 @@ public class scrLife : MonoBehaviour{
 
     public TMP_Text HPText;
     public Animator HPTextAnim;
-
     private scrGlobalStatus globalStatus;
 
+    public GameObject PlayerHP;
+    private Slider HPBar;
+
+    private BlinkingSprite blink;
     public int Defesa;
-    public float D;
+    public float D, Damage;
 
 
     // START
@@ -24,7 +28,23 @@ public class scrLife : MonoBehaviour{
             CurrentHealth = globalStatus.GetCurrentEcoHealth();
         }
 
-        UpdateHPText();
+        HPText.text = "HP: " + CurrentHealth + "/" + MaxHealth;
+        
+        if (blink == null)
+        {
+            blink = gameObject.AddComponent<BlinkingSprite>();
+        }
+        blink = GetComponent<BlinkingSprite>();
+
+        GameObject bar = Instantiate(PlayerHP, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity, transform);
+        HPBar = bar.GetComponentInChildren<Slider>();
+        HPBar.gameObject.SetActive(false);
+    }
+
+    public void FixedUpdate()
+    {
+        HPBar.maxValue = MaxHealth;
+        HPBar.value = CurrentHealth;
     }
 
 
@@ -40,7 +60,7 @@ public class scrLife : MonoBehaviour{
 
         float damage = (amount / (Defesa * D) / 2) + 1;
 
-        CurrentHealth -= damage;
+        CurrentHealth -= Mathf.CeilToInt(Damage);
 
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
 
@@ -79,5 +99,15 @@ public class scrLife : MonoBehaviour{
         }
 
         HPText.text = "HP: " + Mathf.Ceil(CurrentHealth) + "/" + Mathf.Ceil(MaxHealth);
+    }
+
+    public void SetHealthBarVisible()
+    {
+        HPBar.gameObject.SetActive(true);
+    }
+
+    public void SetHealthBarInvisible()
+    {
+        HPBar.gameObject.SetActive(false);
     }
 }

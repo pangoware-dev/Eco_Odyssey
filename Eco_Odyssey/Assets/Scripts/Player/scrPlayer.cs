@@ -18,6 +18,8 @@ public class scrPlayer : MonoBehaviour{
     public scrAnimationControl ac;
 
     public DialogueSO currentDialogue;
+    public CircleCollider2D playerCollider;
+    private scrLife life;
 
 
     // KNOCKBACK
@@ -62,11 +64,25 @@ public class scrPlayer : MonoBehaviour{
 
 
         input.Normalize();
+        PlayerModeChange();
     }
 
+    public void PlayerModeChange()
+    {
+        if (PlayerMode==1)
+        {
+            life.SetHealthBarVisible();
+            playerCollider.offset = new Vector2(0f, 0f);
+        }
+        else
+        {
+            life.SetHealthBarInvisible();
+            playerCollider.offset = new Vector2(0f, -0.5f);
+        }
+    } */
 
-    // DIÁLOGO
-    public void SetDialogue(DialogueSO dialogueSO){
+    public void SetDialogue(DialogueSO dialogueSO)
+    {
         currentDialogue = dialogueSO;
     }
 
@@ -150,11 +166,15 @@ public class scrPlayer : MonoBehaviour{
    private void EnemyRange(){
         Collider2D enemy = Physics2D.OverlapCircle(transform.position, 5f, enemyLayer);
 
-        if (enemy != null){
-            PlayerMode = 1;
+        if (enemy != null)
+        {
+            PlayerMode=1;
+            life.SetHealthBarVisible();
         }
-        else{
-            PlayerMode = 0;
+        else
+        {
+            PlayerMode=0;
+            life.SetHealthBarInvisible();
         }
     }
 

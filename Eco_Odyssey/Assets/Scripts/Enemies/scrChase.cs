@@ -20,15 +20,17 @@ public class scrChase : MonoBehaviour
     public Transform detectionPoint;
     public LayerMask playerLayer;
     private float playerx=0, playery=0;
+    private scrEHealth health;
     Vector2 direction=Vector2.zero;
 
     void Start()
     {
+        ecoComp = GetComponent<scrEnemyEco>();
+        health = GetComponent<scrEHealth>();
+
         rb=GetComponent<Rigidbody2D>();
         anim=GetComponent<Animator>();
         ChangeState(EnemyState.Idle);
-        
-        ecoComp = GetComponent<scrEnemyEco>();
 
         if (ecoComp != null && ecoComp.ecoData != null)
         {
@@ -127,6 +129,7 @@ public class scrChase : MonoBehaviour
                 else if(Vector2.Distance(transform.position, player.position) > attackRange && enemyState != EnemyState.Attacking)
                 {
                     ChangeState(EnemyState.Moving);
+                    health.SetHealthBarVisible();
                 }
         }
 
@@ -137,6 +140,7 @@ public class scrChase : MonoBehaviour
             anim.SetBool("isIdle", true);
             anim.SetFloat("horizontal", 0);
             anim.SetFloat("vertical", 0);
+            health.SetHealthBarInvisible();
         }
     }
 
