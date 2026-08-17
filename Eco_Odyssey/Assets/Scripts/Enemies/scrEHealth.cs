@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scrEHealth : MonoBehaviour
-{
+public class scrEHealth : MonoBehaviour{
     public float currentHP;
     public float maxHP;
 
@@ -13,13 +12,11 @@ public class scrEHealth : MonoBehaviour
 
     public float D, Damage;
 
-    void Start()
-    {
+    void Start(){
         ecoComp = GetComponent<scrEnemyEco>();
         D = 0.5f;
 
-        if (ecoComp != null && ecoComp.ecoData != null)
-        {
+        if (ecoComp != null && ecoComp.ecoData != null){
             maxHP = ecoComp.ecoData.Vida;
         }
 
