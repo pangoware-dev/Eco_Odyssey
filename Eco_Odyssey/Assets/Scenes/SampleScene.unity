@@ -2257,7 +2257,7 @@ Tilemap:
       - {fileID: -1457828558, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 872277938, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 874404162, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 5.764763
+      m_AnimationSpeed: 3.3239207
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3010,7 +3010,7 @@ Tilemap:
       - {fileID: -12955993, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 214392573, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -933217551, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 3.7072349
+      m_AnimationSpeed: 4.103325
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 8, y: -6, z: 0}
@@ -3025,7 +3025,7 @@ Tilemap:
       - {fileID: 9050774589780060452, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -4024382073413787549, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 8143098205146776124, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 4.219392
+      m_AnimationSpeed: 4.175273
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3962,9 +3962,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  vidaAtualParty:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   currentEcoIndex: 0
   currentEco: {fileID: 0}
   vidaC: 0
+  vidaAtual: 0
   atkC: 0
   defC: 0
   veloC: 0
@@ -13617,8 +13626,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047369985}
-  - component: {fileID: 1047369987}
   - component: {fileID: 1047369986}
+  - component: {fileID: 1047369987}
   m_Layer: 5
   m_Name: Portrait
   m_TagString: Untagged
@@ -13657,27 +13666,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scrGlobalStatus
-  ecoParty:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  currentEcoIndex: 0
-  currentEco: {fileID: 0}
-  vidaC: 0
-  vidaAtual: 0
-  atkC: 0
-  defC: 0
-  veloC: 0
-  levelC: 0
-  animControllerC: {fileID: 0}
-  usingEco: 0
-  ecoInicial: {fileID: 11400000, guid: 5999f909d1bebed45ae638f357c0985d, type: 2}
---- !u!114 &529871716
-MonoBehaviour:
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1047369987
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -21416,7 +21424,7 @@ Tilemap:
       - {fileID: 1302470461, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 936425172, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 1532553440, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 5.7992034
+      m_AnimationSpeed: 6.2635407
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -23410,7 +23418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23454,7 +23462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7912931373165992209, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: patrolPoints.Array.data[0].y
-      value: -6
+      value: -8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24201,11 +24209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5974676189528512935, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 5974676189528512935, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5974676189528512935, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24239,6 +24247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6241100296091610807, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
+      propertyPath: m_SortingOrder
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24262,7 +24274,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6c552c51c4cfbaf4bb612d265010b3ba, type: 2}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24299,6 +24311,10 @@ PrefabInstance:
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912931373165992209, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7912931373165992209, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: patrolPoints.Array.data[1].x

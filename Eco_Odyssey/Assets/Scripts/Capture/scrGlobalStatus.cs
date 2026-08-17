@@ -114,7 +114,7 @@ public class scrGlobalStatus : MonoBehaviour{
         animControllerC = currentEco.animControllerEco;
 
 
-        Debug.Log("Eco equipado: " + currentEco.name + " | HP: " + vidaAtual + "/" + vidaC);
+        //Debug.Log("Eco equipado: " + currentEco.name + " | HP: " + vidaAtual + "/" + vidaC);
 
         return true;
     }

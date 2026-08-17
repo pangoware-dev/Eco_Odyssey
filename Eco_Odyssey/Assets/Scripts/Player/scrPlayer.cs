@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement; 
 
 public class scrPlayer : MonoBehaviour{
     public float speed;
@@ -109,7 +110,7 @@ public class scrPlayer : MonoBehaviour{
         speed = normalSpeed;
 
 
-        scrLife life = GetComponent<scrLife>();
+        life = GetComponent<scrLife>();
 
         normalHealth = life.MaxHealth;
 
@@ -169,12 +170,12 @@ public class scrPlayer : MonoBehaviour{
         if (enemy != null)
         {
             PlayerMode=1;
-            life.SetHealthBarVisible();
+            //life.SetHealthBarVisible();
         }
         else
         {
             PlayerMode=0;
-            life.SetHealthBarInvisible();
+            //life.SetHealthBarInvisible();
         }
     }
 
@@ -291,12 +292,13 @@ public class scrPlayer : MonoBehaviour{
         // TODOS OS ECOS MORRERAM
         if (nextEco == -1){
             Debug.Log("Todos os Ecos morreram!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-            PlayerMode = 0;
+/*             PlayerMode = 0;
 
             usingEco = false;
 
-            return;
+            return; */
         }
 
 
