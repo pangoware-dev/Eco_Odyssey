@@ -79,7 +79,7 @@ public class scrPlayer : MonoBehaviour{
             life.SetHealthBarInvisible();
             playerCollider.offset = new Vector2(0f, -0.5f);
         }
-    } */
+    }
 
     public void SetDialogue(DialogueSO dialogueSO)
     {
