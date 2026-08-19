@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10350a1b7d467784491ed0fb9c48c9f6, type: 3}
+  m_Name: SolVermelhaTchau
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
+  lines:
+  - speaker: {fileID: 11400000, guid: ef9e6bc43dd8f26418f55ed7cccaf5b1, type: 2}
+    text: "Fala comigo n\xE3o, nem te conhe\xE7o..."
+  options: []
+  requiredNPCs: []

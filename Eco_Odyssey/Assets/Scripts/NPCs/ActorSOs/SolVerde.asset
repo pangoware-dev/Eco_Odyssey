@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea9d1c047c908b04ea3ea15e58c03da4, type: 3}
-  m_Name: SolFake
+  m_Name: SolVerde
   m_EditorClassIdentifier: Assembly-CSharp::ActorSO
-  actorName: Sol Falsa
+  actorName: Sol Verde
   portrait: {fileID: 5354240762080026822, guid: c5c872d61ac56f547b66308ea0a66e12, type: 3}

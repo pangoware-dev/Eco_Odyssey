@@ -2257,7 +2257,7 @@ Tilemap:
       - {fileID: -1457828558, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 872277938, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 874404162, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 3.3239207
+      m_AnimationSpeed: 6.488947
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3010,7 +3010,7 @@ Tilemap:
       - {fileID: -12955993, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 214392573, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -933217551, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 4.103325
+      m_AnimationSpeed: 6.5325484
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 8, y: -6, z: 0}
@@ -3025,7 +3025,7 @@ Tilemap:
       - {fileID: 9050774589780060452, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -4024382073413787549, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 8143098205146776124, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 4.175273
+      m_AnimationSpeed: 4.3909283
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3880,7 +3880,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   ac: {fileID: 529871716}
-  currentDialogue: {fileID: 0}
   playerCollider: {fileID: 529871717}
 --- !u!50 &529871709
 Rigidbody2D:
@@ -4273,10 +4272,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6523399831482545629, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: conversations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: 'conversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e82508c8d7a612040939496b6fdf7c6e, type: 2}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: 'conversations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c5aa06fd7a9404445af660be05585e8c, type: 2}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: 'conversations.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f575e0d09a33ebd40be64eb5f6c29c01, type: 2}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -21424,7 +21451,7 @@ Tilemap:
       - {fileID: 1302470461, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 936425172, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 1532553440, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 6.2635407
+      m_AnimationSpeed: 3.378065
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -23405,6 +23432,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
@@ -23412,6 +23451,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: conversations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: 'conversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 74c3c784c3345a04fada624ad6617c70, type: 2}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -24067,6 +24114,7 @@ GameObject:
   - component: {fileID: 2116804138}
   - component: {fileID: 2116804137}
   - component: {fileID: 2116804142}
+  - component: {fileID: 2116804143}
   m_Layer: 5
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -24195,6 +24243,18 @@ MonoBehaviour:
   - {fileID: 1968552587}
   - {fileID: 1269088753}
   isDialogueActive: 0
+--- !u!114 &2116804143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116804136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659da469d3b95af4ebccca7d81be29fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueHistoryTracker
 --- !u!1001 &1019974288106623751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24251,6 +24311,18 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 9198503605627495319, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
+      propertyPath: currentConversation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198503605627495319, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
+      propertyPath: conversations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198503605627495319, guid: cbf9aae93068a9e4c83171d7503ca486, type: 3}
+      propertyPath: 'conversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5670a9beacbe2ed449229f56d892d62a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24264,6 +24336,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228226283599130218, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6523399831482545629, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_Name
       value: NPC
@@ -24272,6 +24356,14 @@ PrefabInstance:
       propertyPath: dialogueSO
       value: 
       objectReference: {fileID: 11400000, guid: 6c552c51c4cfbaf4bb612d265010b3ba, type: 2}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: conversations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: 'conversations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c13edf1ce910411498be344d12bab60e, type: 2}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4

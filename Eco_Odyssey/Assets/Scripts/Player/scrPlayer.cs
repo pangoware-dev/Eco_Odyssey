@@ -17,8 +17,6 @@ public class scrPlayer : MonoBehaviour{
     public LayerMask enemyLayer;
 
     public scrAnimationControl ac;
-
-    public DialogueSO currentDialogue;
     public CircleCollider2D playerCollider;
     private scrLife life;
 
@@ -49,7 +47,7 @@ public class scrPlayer : MonoBehaviour{
             ac.Attack();
         }
         else if (Input.GetButtonDown("Slash") && PlayerMode == 0){
-            Interact();
+            //Interact();
         }
 
 
@@ -81,22 +79,7 @@ public class scrPlayer : MonoBehaviour{
             playerCollider.offset = new Vector2(0f, -0.5f);
         }
     }
-
-    public void SetDialogue(DialogueSO dialogueSO)
-    {
-        currentDialogue = dialogueSO;
-    }
-
-
-    public void Interact(){
-        if (DialogueManager.Instance.isDialogueActive && currentDialogue != null){
-            DialogueManager.Instance.AdvanceDialogue();
-        }
-        else if (currentDialogue != null)
-        {
-            DialogueManager.Instance.StartDialogue(currentDialogue);
-        }
-    }
+    
 
 
     // START

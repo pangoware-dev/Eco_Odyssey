@@ -1,16 +1,22 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class NPC_Talking : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
     public Animator InteractAnim;
-    public DialogueSO dialogueSO;
+    public List<DialogueSO> conversations;
+    public DialogueSO currentConversation;
+    private scrPlayer player;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.GetComponent<scrPlayer>();
     }
 
     private void OnEnable()
@@ -27,34 +33,38 @@ public class NPC_Talking : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if(collision.CompareTag("Player"))
+    if (Input.GetButtonDown("Slash") && player.PlayerMode == 0)
+    {
+        if (DialogueManager.Instance.isDialogueActive)
         {
-            collision.GetComponent<scrPlayer>().SetDialogue(dialogueSO);
+            DialogueManager.Instance.AdvanceDialogue();
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player"))
+        else
         {
-            collision.GetComponent<scrPlayer>().SetDialogue(null);
-        }
-    }
+            CheckForNewConversation();
 
-    /* private void Update()
-    {
-        if (Input.GetButtonDown("Slash"))
-        {
-            if(DialogueManager.Instance.isDialogueActive)
+            if (currentConversation != null)
             {
-                DialogueManager.Instance.AdvanceDialogue();
-            }
-            else
-            {
-                DialogueManager.Instance.StartDialogue(dialogueSO);
+                DialogueManager.Instance.StartDialogue(currentConversation);
             }
         }
-    } */
+    }
+}
+
+    private void CheckForNewConversation()
+    {
+        for (int i = conversations.Count - 1; i >= 0; i--)
+        {
+            var convo = conversations[i];
+
+            if (convo != null && convo.isConditionMet())
+            {
+                currentConversation = convo;
+                conversations.RemoveAt(i);
+                break;
+            }
+        }
+    }
 }
