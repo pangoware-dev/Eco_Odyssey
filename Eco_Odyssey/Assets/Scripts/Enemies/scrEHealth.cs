@@ -56,8 +56,19 @@ public class scrEHealth : MonoBehaviour
 
     public void changeHP(float amount)
     {
+<<<<<<< Updated upstream
         Damage = amount/(ecoComp.ecoData.Defesa*D)/2+1;
         currentHP -= Mathf.CeilToInt(Damage);
+=======
+        float effectiveness = scrEcoFather.ElementEffectiveness(
+        attackerEco.Element1,
+        attackerEco.Element2,
+        ecoComp.ecoData.Element1,
+        ecoComp.ecoData.Element2);
+
+        Damage = amount/(ecoComp.ecoData.Defesa*D)/5*10;
+        currentHP -= Mathf.CeilToInt(Mathf.CeilToInt(Damage)*effectiveness);
+>>>>>>> Stashed changes
 
         Debug.Log("HP Inimigo: " + currentHP);
         blink.Blink();

@@ -56,9 +56,48 @@ public class scrLife : MonoBehaviour
         blink.Blink();
         HPText.text="HP: "+CurrentHealth+"/"+MaxHealth;
 
+<<<<<<< Updated upstream
         if(CurrentHealth>MaxHealth)
         {
             CurrentHealth=MaxHealth;
+=======
+        float effectiveness = scrEcoFather.ElementEffectiveness(
+        attackerEco.Element1,
+        attackerEco.Element2,
+        globalStatus.currentEco.Element1,
+        globalStatus.currentEco.Element2);
+
+        float damage = amount / (Defesa * D)/5*10;
+
+        CurrentHealth -= Mathf.CeilToInt(damage)*effectiveness;
+
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+
+
+        // Salva o HP no slot do Eco
+        globalStatus.SaveCurrentEcoHealth(CurrentHealth);
+
+
+        /* if (HPTextAnim != null){
+            HPTextAnim.Play("HP_Animation");
+        } */
+
+
+        UpdateHPText();
+
+
+        // ECO MORREU
+        if (CurrentHealth <= 0){
+            CurrentHealth = 0;
+
+            globalStatus.SaveCurrentEcoHealth(0);
+
+            scrPlayer player = GetComponent<scrPlayer>();
+
+            if (player != null){
+                player.EcoDied();
+            }
+>>>>>>> Stashed changes
         }
         else if(CurrentHealth<=0)
         {

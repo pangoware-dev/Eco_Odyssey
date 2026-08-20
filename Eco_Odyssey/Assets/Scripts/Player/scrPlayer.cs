@@ -216,8 +216,12 @@ public class scrPlayer : MonoBehaviour
         ecoSpeed = globalStatus.veloC;
         speed = (ecoSpeed+15*Mathf.Sqrt(globalStatus.levelC))/10;
 
+<<<<<<< Updated upstream
         life.MaxHealth = (int)globalStatus.vidaC;
         life.CurrentHealth = life.MaxHealth;
+=======
+        speed = (ecoSpeed+2*Mathf.Sqrt(globalStatus.levelC))/5;
+>>>>>>> Stashed changes
 
         life.HPText.text =
             "HP: " + life.CurrentHealth + "/" + life.MaxHealth;

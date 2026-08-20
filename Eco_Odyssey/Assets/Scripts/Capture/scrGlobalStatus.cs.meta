@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - currentEco: {instanceID: 0}
   - animControllerC: {instanceID: 0}
-  - ecoInicial: {fileID: 11400000, guid: 32bd755deb24b844394fead1b8bd3001, type: 2}
+  - ecoInicial: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
