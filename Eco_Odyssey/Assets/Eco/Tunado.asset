@@ -16,7 +16,7 @@ MonoBehaviour:
   Defesa: 10
   Vida: 8
   Velocidade: 20
-  Level: 5
+  VidaAtual: 0
   animControllerEco: {fileID: 9100000, guid: 31c8781423606cb4da9e4f87ed601d20, type: 2}
   nome: Tunado
   description: 

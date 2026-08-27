@@ -21,6 +21,8 @@ public class scrChase : MonoBehaviour
     public LayerMask playerLayer;
     private float playerx=0, playery=0;
     private scrEHealth health;
+    public scrGlobalStatus globalStatus;
+    public int Level=5;
     Vector2 direction=Vector2.zero;
 
     void Start()
@@ -31,12 +33,17 @@ public class scrChase : MonoBehaviour
         rb=GetComponent<Rigidbody2D>();
         anim=GetComponent<Animator>();
         ChangeState(EnemyState.Idle);
+        ApplyStatus();
+}
 
+    private void ApplyStatus()
+    {
+        //Velocidade
         if (ecoComp != null && ecoComp.ecoData != null)
         {
             ecoSpeed = ecoComp.ecoData.Velocidade;
         }
-}
+    }
 
     void FixedUpdate()
     {
@@ -61,6 +68,7 @@ public class scrChase : MonoBehaviour
                 ChangeState(EnemyState.Moving);
             }
         }
+        Level=globalStatus.levelC;
     }
 
     public void canDodge(int dodge)
@@ -70,6 +78,7 @@ public class scrChase : MonoBehaviour
 
     public void Chase()
     {
+        ApplyStatus();
         playerx=player.position.x-transform.position.x;
         playery=player.position.y-transform.position.y;
         float absX = Mathf.Abs(playerx);
@@ -106,7 +115,7 @@ public class scrChase : MonoBehaviour
             }
             direction=(transform.position-player.position).normalized;
             }
-            speed = (ecoSpeed+15*Mathf.Sqrt(ecoComp.ecoData.Level))/10;
+            speed = (ecoSpeed+2*Mathf.Sqrt(Level))/5;
             rb.linearVelocity=direction*speed;
     }
 
