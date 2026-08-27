@@ -10691,8 +10691,6 @@ MonoBehaviour:
     m_Bits: 64
   Ataque: 0
   cooldown: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &344350391
 GameObject:
   m_ObjectHideFlags: 0
@@ -11991,7 +11989,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
->>>>>>> Stashed changes
 --- !u!1 &361543238
 GameObject:
   m_ObjectHideFlags: 0
@@ -12246,8 +12243,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450212351}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &453338640
 GameObject:
   m_ObjectHideFlags: 0
@@ -12771,7 +12766,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
->>>>>>> Stashed changes
 --- !u!1 &463492469
 GameObject:
   m_ObjectHideFlags: 0
@@ -13639,10 +13633,7 @@ MonoBehaviour:
   - {fileID: 0}
   currentEcoIndex: 0
   currentEco: {fileID: 0}
-<<<<<<< Updated upstream
-=======
   vidaAtual: 0
->>>>>>> Stashed changes
   vidaC: 0
   atkC: 0
   defC: 0
@@ -13969,8 +13960,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &885170160
 GameObject:
   m_ObjectHideFlags: 0
@@ -23278,7 +23267,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
->>>>>>> Stashed changes
 --- !u!1 &1047369984
 GameObject:
   m_ObjectHideFlags: 0
@@ -23354,8 +23342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047369984}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1074698983
 GameObject:
   m_ObjectHideFlags: 0
@@ -31670,7 +31656,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
->>>>>>> Stashed changes
 --- !u!1 &1086226426
 GameObject:
   m_ObjectHideFlags: 0
@@ -33037,8 +33022,6 @@ Transform:
   - {fileID: 89124760}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!483693784 &1785538722
 TilemapRenderer:
   serializedVersion: 2
@@ -33476,7 +33459,6 @@ Sprite:
   m_Bones: []
   m_ScriptableObjects: []
   m_SpriteID: 
->>>>>>> Stashed changes
 --- !u!1001 &1843370257
 PrefabInstance:
   m_ObjectHideFlags: 0
