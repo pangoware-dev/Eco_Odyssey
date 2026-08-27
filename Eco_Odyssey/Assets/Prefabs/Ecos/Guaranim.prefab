@@ -150,7 +150,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: -594197781322936934, guid: 8351f2f810d7b4d49876b12fc4a00efe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::scrEHealth
   currentHP: 10
   maxHP: 10
-  HealthBar: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+  EnemyHP: {fileID: 0}
   D: 0.4
   Damage: 0
 --- !u!114 &3501984546626255776

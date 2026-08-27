@@ -1,14 +1,20 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class Interactables : MonoBehaviour
 {
     public Animator InteractAnim;
-    public DialogueSO dialogueSO;
+    public DialogueSO currentConversation;
     public bool isInteractable = false;
+    public List<DialogueSO> conversations;
+    private scrPlayer player;
 
     private void Start()
     {
         InteractAnim.Play("Idle");
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.GetComponent<scrPlayer>();
     }
     private void Open()
     {
@@ -20,11 +26,11 @@ public class Interactables : MonoBehaviour
         InteractAnim.Play("Close");
     }
 
-/*     private void Update()
+     private void Update()
     {
         if (Input.GetButtonDown("Slash"))
         {
-            if (isInteractable==true)
+            if (isInteractable==true&&player.PlayerMode==0)
             {
                 if(DialogueManager.Instance.isDialogueActive)
                 {
@@ -32,11 +38,12 @@ public class Interactables : MonoBehaviour
                 }
                 else
                 {
-                    DialogueManager.Instance.StartDialogue(dialogueSO);
+                    CheckForNewConversation();
+                    DialogueManager.Instance.StartDialogue(currentConversation);
                 }
             }
         }
-    } */
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,7 +51,6 @@ public class Interactables : MonoBehaviour
         {
             Open();
             isInteractable = true;
-            collision.GetComponent<scrPlayer>().SetDialogue(dialogueSO);
         }
     }
 
@@ -54,7 +60,19 @@ public class Interactables : MonoBehaviour
         {
             Close();
             isInteractable = false;
-            collision.GetComponent<scrPlayer>().SetDialogue(null);
+        }
+    }
+
+    private void CheckForNewConversation()
+    {
+        for (int i=conversations.Count -1; i>=0; i++)
+        {
+            var convo = conversations[i];
+            if(convo != null && convo.isConditionMet())
+            {
+                conversations.RemoveAt(i);
+                currentConversation=convo;
+            }
         }
     }
 }

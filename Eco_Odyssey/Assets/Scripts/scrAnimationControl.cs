@@ -3,6 +3,7 @@ using UnityEngine;
 public class scrAnimationControl : MonoBehaviour
 {
     [SerializeField] private bool isPlayer;
+    private scrGlobalStatus globalStatus;
     public Transform attackPoint;
     public int damage;
     public float weaponRange;
@@ -21,6 +22,7 @@ public class scrAnimationControl : MonoBehaviour
     
     void Start()
     {
+        globalStatus = GetComponent<scrGlobalStatus>();
         // Detecta automaticamente se é Player pela tag
         isPlayer = CompareTag("Player");
         // Encontra o AttackPoint se não foi atribuído
@@ -56,7 +58,6 @@ public class scrAnimationControl : MonoBehaviour
     {
         if (gameObject.CompareTag("Player"))
         {
-            scrGlobalStatus globalStatus = GetComponent<scrGlobalStatus>();
             if (globalStatus != null)
             {
                 Ataque = (int)globalStatus.atkC;
@@ -79,7 +80,11 @@ public class scrAnimationControl : MonoBehaviour
                 scrLife life = hits[0].GetComponent<scrLife>();
                 if (life != null)
                 {
-                    life.ChangeHealth(damage);
+                    if (ecoComp != null && ecoComp.ecoData != null)
+                    {
+                        life.ChangeHealth(damage, ecoComp.ecoData);
+                        Debug.Log("Eco Inimigo: "+ecoComp.ecoData.name);
+                    }
                 }
                 
                 // Verifica se tem o componente scrPlayer
@@ -108,7 +113,11 @@ public class scrAnimationControl : MonoBehaviour
                 scrEHealth eHealth = enemies[0].GetComponent<scrEHealth>();
                 if (eHealth != null)
                 {
-                    eHealth.changeHP(Ataque);
+                    if (globalStatus != null && globalStatus.currentEco != null)
+                    {
+                        eHealth.changeHP(Ataque, globalStatus.currentEco);
+                        Debug.Log("Eco Player: "+globalStatus.currentEco);
+                    }
                 }
                 
                 // Verifica se tem o componente scrEnemyKB
