@@ -14,10 +14,10 @@ public class scrEHealth : MonoBehaviour{
 
     void Start(){
         ecoComp = GetComponent<scrEnemyEco>();
-        D = 0.5f;
+        D = 1f;
 
         if (ecoComp != null && ecoComp.ecoData != null){
-            maxHP = ecoComp.ecoData.Vida;
+            maxHP = ecoComp.ecoData.Vida*2;
         }
 
         currentHP = maxHP;
@@ -49,17 +49,27 @@ public class scrEHealth : MonoBehaviour{
         HPBar.gameObject.SetActive(false);
     }
 
-    public void changeHP(float amount)
+    public void changeHP(float amount, scrEcoFather attackerEco)
     {
-        Damage = amount/(ecoComp.ecoData.Defesa*D)/2+1;
-        currentHP -= Mathf.CeilToInt(Damage);
+        float effectiveness = scrEcoFather.ElementEffectiveness(
+        attackerEco.Element1,
+        attackerEco.Element2,
+        ecoComp.ecoData.Element1,
+        ecoComp.ecoData.Element2);
+
+        Damage = amount-(ecoComp.ecoData.Defesa*D)/3;
+        currentHP -= Mathf.CeilToInt(Mathf.CeilToInt(Damage)*effectiveness);
 
         Debug.Log("HP Inimigo: " + currentHP);
         blink.Blink();
 
-        if(currentHP > maxHP || currentHP <= 0)
+        if(currentHP > maxHP)
         {
             currentHP = maxHP;
+        }
+        if (currentHP <= 0)
+        {
+            currentHP=1;
         }
     }
 }

@@ -23,7 +23,7 @@ public class scrLife : MonoBehaviour{
         globalStatus = GetComponent<scrGlobalStatus>();
 
         if (globalStatus != null && globalStatus.currentEco != null){
-            MaxHealth = globalStatus.vidaC;
+            MaxHealth = globalStatus.vidaC*2;
 
             CurrentHealth = globalStatus.GetCurrentEcoHealth();
         }
@@ -49,18 +49,24 @@ public class scrLife : MonoBehaviour{
 
 
     // RECEBER DANO
-    public void ChangeHealth(int amount){
+    public void ChangeHealth(int amount, scrEcoFather attackerEco){
         if (globalStatus == null || globalStatus.currentEco == null){
             return;
         }
 
-        D = 0.4f;
+        D = 1f;
 
         Defesa = (int)globalStatus.defC;
 
-        float damage = (amount / (Defesa * D) / 2) + 1;
+        float effectiveness = scrEcoFather.ElementEffectiveness(
+        attackerEco.Element1,
+        attackerEco.Element2,
+        globalStatus.currentEco.Element1,
+        globalStatus.currentEco.Element2);
 
-        CurrentHealth -= Mathf.CeilToInt(Damage);
+        float damage = amount - (Defesa * D)/3;
+
+        CurrentHealth -= Mathf.CeilToInt(damage)*effectiveness;
 
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
 
@@ -69,9 +75,9 @@ public class scrLife : MonoBehaviour{
         globalStatus.SaveCurrentEcoHealth(CurrentHealth);
 
 
-        if (HPTextAnim != null){
+        /* if (HPTextAnim != null){
             HPTextAnim.Play("HP_Animation");
-        }
+        } */
 
 
         UpdateHPText();

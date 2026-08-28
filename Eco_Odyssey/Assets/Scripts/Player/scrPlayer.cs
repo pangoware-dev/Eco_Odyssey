@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement; 
 
 public class scrPlayer : MonoBehaviour{
     public float speed;
@@ -16,8 +17,6 @@ public class scrPlayer : MonoBehaviour{
     public LayerMask enemyLayer;
 
     public scrAnimationControl ac;
-
-    public DialogueSO currentDialogue;
     public CircleCollider2D playerCollider;
     private scrLife life;
 
@@ -48,7 +47,7 @@ public class scrPlayer : MonoBehaviour{
             ac.Attack();
         }
         else if (Input.GetButtonDown("Slash") && PlayerMode == 0){
-            Interact();
+            //Interact();
         }
 
 
@@ -79,23 +78,8 @@ public class scrPlayer : MonoBehaviour{
             life.SetHealthBarInvisible();
             playerCollider.offset = new Vector2(0f, -0.5f);
         }
-    } */
-
-    public void SetDialogue(DialogueSO dialogueSO)
-    {
-        currentDialogue = dialogueSO;
     }
-
-
-    public void Interact(){
-        if (DialogueManager.Instance.isDialogueActive && currentDialogue != null){
-            DialogueManager.Instance.AdvanceDialogue();
-        }
-        else if (currentDialogue != null)
-        {
-            DialogueManager.Instance.StartDialogue(currentDialogue);
-        }
-    }
+    
 
 
     // START
@@ -109,7 +93,7 @@ public class scrPlayer : MonoBehaviour{
         speed = normalSpeed;
 
 
-        scrLife life = GetComponent<scrLife>();
+        life = GetComponent<scrLife>();
 
         normalHealth = life.MaxHealth;
 
@@ -169,12 +153,12 @@ public class scrPlayer : MonoBehaviour{
         if (enemy != null)
         {
             PlayerMode=1;
-            life.SetHealthBarVisible();
+            //life.SetHealthBarVisible();
         }
         else
         {
             PlayerMode=0;
-            life.SetHealthBarInvisible();
+            //life.SetHealthBarInvisible();
         }
     }
 
@@ -291,12 +275,13 @@ public class scrPlayer : MonoBehaviour{
         // TODOS OS ECOS MORRERAM
         if (nextEco == -1){
             Debug.Log("Todos os Ecos morreram!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-            PlayerMode = 0;
+/*             PlayerMode = 0;
 
             usingEco = false;
 
-            return;
+            return; */
         }
 
 
