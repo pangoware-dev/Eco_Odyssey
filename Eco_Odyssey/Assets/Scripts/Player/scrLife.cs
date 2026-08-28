@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class scrLife : MonoBehaviour
-{
-    public float MaxHealth, CurrentHealth;
+public class scrLife : MonoBehaviour{
+    public float MaxHealth;
+    public float CurrentHealth;
+
     public TMP_Text HPText;
     public Animator HPTextAnim;
     private scrGlobalStatus globalStatus;
@@ -16,14 +17,15 @@ public class scrLife : MonoBehaviour
     public int Defesa;
     public float D, Damage;
 
-    public void Start()
-    {
+
+    // START
+  void Start(){
         globalStatus = GetComponent<scrGlobalStatus>();
 
-        if(globalStatus != null && globalStatus.currentEco != null)
-        {
-            MaxHealth = (int)globalStatus.vidaC;
-            CurrentHealth = MaxHealth;
+        if (globalStatus != null && globalStatus.currentEco != null){
+            MaxHealth = globalStatus.vidaC*2;
+
+            CurrentHealth = globalStatus.GetCurrentEcoHealth();
         }
 
         HPText.text = "HP: " + CurrentHealth + "/" + MaxHealth;
@@ -44,30 +46,25 @@ public class scrLife : MonoBehaviour
         HPBar.maxValue = MaxHealth;
         HPBar.value = CurrentHealth;
     }
-    
-    public void ChangeHealth(int amount)
-    {
-        D = 0.4f;
-        Defesa = (int)globalStatus.defC;
-        
-        Damage = (amount/(Defesa*D)/2)+1;
-        CurrentHealth-=Mathf.CeilToInt(Damage);
-        HPTextAnim.Play("Text_Pop");
-        blink.Blink();
-        HPText.text="HP: "+CurrentHealth+"/"+MaxHealth;
 
-<<<<<<< Updated upstream
-        if(CurrentHealth>MaxHealth)
-        {
-            CurrentHealth=MaxHealth;
-=======
+
+    // RECEBER DANO
+    public void ChangeHealth(int amount, scrEcoFather attackerEco){
+        if (globalStatus == null || globalStatus.currentEco == null){
+            return;
+        }
+
+        D = 1f;
+
+        Defesa = (int)globalStatus.defC;
+
         float effectiveness = scrEcoFather.ElementEffectiveness(
         attackerEco.Element1,
         attackerEco.Element2,
         globalStatus.currentEco.Element1,
         globalStatus.currentEco.Element2);
 
-        float damage = amount / (Defesa * D)/5*10;
+        float damage = amount - (Defesa * D)/3;
 
         CurrentHealth -= Mathf.CeilToInt(damage)*effectiveness;
 
@@ -97,23 +94,26 @@ public class scrLife : MonoBehaviour
             if (player != null){
                 player.EcoDied();
             }
->>>>>>> Stashed changes
         }
-        else if(CurrentHealth<=0)
-        {
-            gameObject.SetActive(false);
+    }
+
+
+    // ATUALIZAR TEXTO
+    public void UpdateHPText(){
+        if (HPText == null){
+            return;
         }
+
+        HPText.text = "HP: " + Mathf.Ceil(CurrentHealth) + "/" + Mathf.Ceil(MaxHealth);
     }
 
     public void SetHealthBarVisible()
     {
         HPBar.gameObject.SetActive(true);
-        Debug.Log("HP Bar Visible");
     }
 
     public void SetHealthBarInvisible()
     {
         HPBar.gameObject.SetActive(false);
-        Debug.Log("HP Bar Invisible");
     }
 }
