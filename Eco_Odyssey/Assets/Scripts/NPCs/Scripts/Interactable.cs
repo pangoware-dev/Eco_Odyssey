@@ -10,7 +10,7 @@ public class Interactables : MonoBehaviour
     public List<DialogueSO> conversations;
     private scrPlayer player;
 
-    private void Start()
+    private void Awake()
     {
         InteractAnim.Play("Idle");
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -28,9 +28,9 @@ public class Interactables : MonoBehaviour
 
      private void Update()
     {
-        if (Input.GetButtonDown("Slash"))
+        if (Input.GetButtonDown("Slash")&&player.PlayerMode==0)
         {
-            if (isInteractable==true&&player.PlayerMode==0)
+            if (isInteractable==true)
             {
                 if(DialogueManager.Instance.isDialogueActive)
                 {
@@ -39,7 +39,10 @@ public class Interactables : MonoBehaviour
                 else
                 {
                     CheckForNewConversation();
-                    DialogueManager.Instance.StartDialogue(currentConversation);
+                    if (currentConversation != null)
+                    {
+                        DialogueManager.Instance.StartDialogue(currentConversation);
+                    }
                 }
             }
         }
@@ -65,13 +68,14 @@ public class Interactables : MonoBehaviour
 
     private void CheckForNewConversation()
     {
-        for (int i=conversations.Count -1; i>=0; i++)
+        for (int i=conversations.Count - 1; i>=0; i++)
         {
             var convo = conversations[i];
             if(convo != null && convo.isConditionMet())
             {
-                conversations.RemoveAt(i);
                 currentConversation=convo;
+                conversations.RemoveAt(i);
+                break;
             }
         }
     }

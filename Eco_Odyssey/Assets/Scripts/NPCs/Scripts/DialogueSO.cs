@@ -8,13 +8,12 @@ public class DialogueSO : ScriptableObject
 
     [Header("Requerimentos condicionais (Opcional)")]
     public ActorSO[] requiredNPCs;
+    public LocationSO[] requiredLocations;
+    public ItemsSO[] requiredItems;
 
-    //Itens
-    //Localizações
-
-    //Checar NPCs
     public bool isConditionMet()
     {
+        //Checar NPCs
         if (requiredNPCs.Length>0)
         {
             foreach (var npc in requiredNPCs)
@@ -26,8 +25,23 @@ public class DialogueSO : ScriptableObject
             }
         }
 
-        //Checar Itens
         //Checar Localizações
+        if (requiredLocations.Length>0)
+        {
+            foreach (var location in requiredLocations)
+            {
+                if (!LocationHistoryTracker.Instance.HasVisited(location))
+                {
+                    return false;
+                }
+            }
+        }
+
+        //Checar Itens
+        if (requiredItems.Length>0)
+        {
+            
+        }
         return true;
     }
 }

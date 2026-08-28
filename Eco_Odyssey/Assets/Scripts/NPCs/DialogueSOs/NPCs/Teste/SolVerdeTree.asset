@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10350a1b7d467784491ed0fb9c48c9f6, type: 3}
-  m_Name: SolVermelhaOi
+  m_Name: SolVerdeTree
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
-  lines:
-  - speaker: {fileID: 11400000, guid: ef9e6bc43dd8f26418f55ed7cccaf5b1, type: 2}
-    text: "Oi eu sou a Sol Vermelha! Minhas irm\xE3s falaram de voc\xEA!"
+  lines: []
   options: []
-  requiredNPCs:
-  - {fileID: 11400000, guid: 7de05702be1743d4c91e09edb76cd6fc, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

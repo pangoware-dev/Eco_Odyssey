@@ -5,7 +5,7 @@ using System.Collections;
 public class DialogueHistoryTracker : MonoBehaviour
 {
     public static DialogueHistoryTracker Instance;
-    private readonly List<ActorSO> spokenNPCs = new List<ActorSO>();
+    private readonly HashSet<ActorSO> spokenNPCs = new HashSet<ActorSO>();
 
     private void Awake()
     {
