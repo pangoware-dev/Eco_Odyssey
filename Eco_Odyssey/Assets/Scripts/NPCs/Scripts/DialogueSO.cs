@@ -9,7 +9,7 @@ public class DialogueSO : ScriptableObject
     [Header("Requerimentos condicionais (Opcional)")]
     public ActorSO[] requiredNPCs;
     public LocationSO[] requiredLocations;
-    public ItemsSO[] requiredItems;
+    //public ItemsSO[] requiredItems;
 
     public bool isConditionMet()
     {
@@ -38,10 +38,10 @@ public class DialogueSO : ScriptableObject
         }
 
         //Checar Itens
-        if (requiredItems.Length>0)
+        /* if (requiredItems.Length>0)
         {
             
-        }
+        } */
         return true;
     }
 }

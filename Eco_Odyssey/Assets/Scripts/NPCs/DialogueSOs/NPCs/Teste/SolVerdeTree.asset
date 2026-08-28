@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10350a1b7d467784491ed0fb9c48c9f6, type: 3}
   m_Name: SolVerdeTree
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
-  lines: []
+  lines:
+  - speaker: {fileID: 11400000, guid: d75a52702f86c0440b8be7ed0e22c966, type: 2}
+    text: "Essa \xE1rvore..."
+  - speaker: {fileID: 11400000, guid: d75a52702f86c0440b8be7ed0e22c966, type: 2}
+    text: Ela mexe...
   options: []
   requiredNPCs: []
-  requiredLocations: []
+  requiredLocations:
+  - {fileID: 11400000, guid: a724bb8cf50d19a489f6642bc0176b03, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb132e4a93511074685c6b465e952fff, type: 3}
   m_Name: Mountain
   m_EditorClassIdentifier: Assembly-CSharp::LocationSO
-  locationID: Mountain1_1
-  displayName: Montanha
+  locationID: Hill1_1
+  displayName: Monte

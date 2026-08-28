@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SolVermelhaVisitouMontanha
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   lines:
-  - speaker: {fileID: 11400000, guid: d75a52702f86c0440b8be7ed0e22c966, type: 2}
+  - speaker: {fileID: 11400000, guid: ef9e6bc43dd8f26418f55ed7cccaf5b1, type: 2}
     text: "As montanhas s\xE3o lindas, n\xE3o s\xE3o?"
-  - speaker: {fileID: 11400000, guid: d75a52702f86c0440b8be7ed0e22c966, type: 2}
+  - speaker: {fileID: 11400000, guid: ef9e6bc43dd8f26418f55ed7cccaf5b1, type: 2}
     text: "Voc\xEA chegou a ler a placa na montanha? \xC9 engra\xE7ada..."
   options: []
   requiredNPCs: []

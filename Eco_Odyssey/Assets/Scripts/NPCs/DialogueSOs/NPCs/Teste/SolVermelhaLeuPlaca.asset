@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10350a1b7d467784491ed0fb9c48c9f6, type: 3}
   m_Name: SolVermelhaLeuPlaca
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
-  lines: []
+  lines:
+  - speaker: {fileID: 11400000, guid: ef9e6bc43dd8f26418f55ed7cccaf5b1, type: 2}
+    text: "HAHAHAHAHA AQUELA PLACA \xC9 HIL\xC1RIA!!!"
   options: []
-  requiredNPCs: []
-  requiredLocations: []
+  requiredNPCs:
+  - {fileID: 11400000, guid: af9f34e67d12eab40874a5eb126b157b, type: 2}
+  requiredLocations:
+  - {fileID: 11400000, guid: c4bfb02d71b59844b8df11ba43559c11, type: 2}
