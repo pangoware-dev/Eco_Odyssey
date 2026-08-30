@@ -18,6 +18,7 @@ public class scrPlayer : MonoBehaviour{
 
     public scrAnimationControl ac;
     public CircleCollider2D playerCollider;
+    public GameObject dialogueUI;
     private scrLife life;
 
 
@@ -98,6 +99,7 @@ public class scrPlayer : MonoBehaviour{
         normalHealth = life.MaxHealth;
 
         normalCurrentHealth = life.CurrentHealth;
+        dialogueUI.gameObject.SetActive(true);
     }
 
 

@@ -4,10 +4,13 @@ using UnityEngine.UI;
 public class scrEHealth : MonoBehaviour{
     public float currentHP;
     public float maxHP;
+    public int level=5;
+    private float def;
 
     private scrEnemyEco ecoComp;
     private BlinkingSprite blink;
     public GameObject EnemyHP;
+    public scrGlobalStatus globalStatus;
     private Slider HPBar;
 
     public float D, Damage;
@@ -15,9 +18,11 @@ public class scrEHealth : MonoBehaviour{
     void Start(){
         ecoComp = GetComponent<scrEnemyEco>();
         D = 1f;
+        level=5;
+        def=(ecoComp.ecoData.Defesa+2*Mathf.Sqrt(level))*10;
 
         if (ecoComp != null && ecoComp.ecoData != null){
-            maxHP = ecoComp.ecoData.Vida*2;
+            maxHP = (ecoComp.ecoData.Vida+2*Mathf.Sqrt(level))*10;
         }
 
         currentHP = maxHP;
@@ -37,6 +42,12 @@ public class scrEHealth : MonoBehaviour{
     {
         HPBar.maxValue = maxHP;
         HPBar.value = currentHP;
+        level=globalStatus.levelC;
+
+        if (ecoComp != null && ecoComp.ecoData != null){
+            maxHP = (ecoComp.ecoData.Vida+2*Mathf.Sqrt(level))*10;
+        }
+        MaxHPLevel();
     }
 
     public void SetHealthBarVisible()
@@ -49,6 +60,14 @@ public class scrEHealth : MonoBehaviour{
         HPBar.gameObject.SetActive(false);
     }
 
+    public void MaxHPLevel()
+    {
+        if (HPBar.gameObject==false)
+        {
+            currentHP = maxHP;
+        }
+    }
+
     public void changeHP(float amount, scrEcoFather attackerEco)
     {
         float effectiveness = scrEcoFather.ElementEffectiveness(
@@ -57,7 +76,8 @@ public class scrEHealth : MonoBehaviour{
         ecoComp.ecoData.Element1,
         ecoComp.ecoData.Element2);
 
-        Damage = amount-(ecoComp.ecoData.Defesa*D)/3;
+        Damage = amount-def*D/3;
+        Damage = Mathf.Max(Damage, 1);
         currentHP -= Mathf.CeilToInt(Mathf.CeilToInt(Damage)*effectiveness);
 
         Debug.Log("HP Inimigo: " + currentHP);

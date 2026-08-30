@@ -221,7 +221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::scrEHealth
   currentHP: 10
   maxHP: 10
-  EnemyHP: {fileID: 0}
+  EnemyHP: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
+  globalStatus: {fileID: 0}
   D: 0.4
   Damage: 0
 --- !u!114 &1884679611047601895

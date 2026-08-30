@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 8f479f8b014adb24d8e7136b9230c368
+guid: da26bb8a1f4f4f742952b1a50ae4513d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8871922128759142585
-    second: Idle_Baixo_0
+      213: -974769724729543079
+    second: Sol_Baixo-Sheet-export_0
   - first:
-      213: 8267723770062928734
-    second: Idle_Baixo_1
-  - first:
-      213: -1178985036349349681
-    second: Idle_Baixo_2
-  - first:
-      213: 5723490852938104650
-    second: Idle_Baixo_3
+      213: 8227638695089025616
+    second: Sol_Baixo-Sheet-export_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,8 +77,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Baixo_0
+      name: Sol_Baixo-Sheet-export_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,42 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 747426054d990e480800000000000000
-      internalID: -8871922128759142585
+      spriteID: 956b0b3991ce872f0800000000000000
+      internalID: -974769724729543079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Baixo_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5b77afe6fadcb270800000000000000
-      internalID: 8267723770062928734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Baixo_2
+      name: Sol_Baixo-Sheet-export_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc065e02b5763afe0800000000000000
-      internalID: -1178985036349349681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Baixo_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4fb29c3b9ced6f40800000000000000
-      internalID: 5723490852938104650
+      spriteID: 0523a012dc17e2270800000000000000
+      internalID: 8227638695089025616
       vertices: []
       indices: 
       edges: []
@@ -200,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 777ec2666c78bbc43927da67abb41029
+    spriteID: 6661e3aef9db1df4bbf1d8ce98a2565a
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +160,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle_Baixo_0: -8871922128759142585
-      Idle_Baixo_1: 8267723770062928734
-      Idle_Baixo_2: -1178985036349349681
-      Idle_Baixo_3: 5723490852938104650
+      Sol_Baixo-Sheet-export_0: -974769724729543079
+      Sol_Baixo-Sheet-export_1: 8227638695089025616
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

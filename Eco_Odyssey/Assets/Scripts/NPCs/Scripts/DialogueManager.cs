@@ -14,7 +14,6 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text actorName;
     public TMP_Text dialogueText;
     public Button[] choiceButtons;
-
     public bool isDialogueActive = false;
 
     private DialogueSO currentDialogue;
@@ -34,7 +33,6 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;

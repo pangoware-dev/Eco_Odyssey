@@ -12,6 +12,7 @@ public class scrLife : MonoBehaviour{
 
     public GameObject PlayerHP;
     private Slider HPBar;
+    public GameObject hpUI;
 
     private BlinkingSprite blink;
     public int Defesa;
@@ -39,6 +40,7 @@ public class scrLife : MonoBehaviour{
         GameObject bar = Instantiate(PlayerHP, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity, transform);
         HPBar = bar.GetComponentInChildren<Slider>();
         HPBar.gameObject.SetActive(false);
+        hpUI.gameObject.SetActive(false);
     }
 
     public void FixedUpdate()
@@ -49,7 +51,7 @@ public class scrLife : MonoBehaviour{
 
 
     // RECEBER DANO
-    public void ChangeHealth(int amount, scrEcoFather attackerEco){
+    public void ChangeHealth(float amount, scrEcoFather attackerEco){
         if (globalStatus == null || globalStatus.currentEco == null){
             return;
         }
@@ -64,10 +66,11 @@ public class scrLife : MonoBehaviour{
         globalStatus.currentEco.Element1,
         globalStatus.currentEco.Element2);
 
-        float damage = amount - (Defesa * D)/3;
+        float damage = amount - Defesa * D/3;
+        damage = Mathf.Max(damage, 1);
 
-        CurrentHealth -= Mathf.CeilToInt(damage)*effectiveness;
-
+        CurrentHealth -= Mathf.CeilToInt(Mathf.CeilToInt(damage)*effectiveness);
+        
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
 
 
@@ -95,6 +98,12 @@ public class scrLife : MonoBehaviour{
                 player.EcoDied();
             }
         }
+        Debug.Log(
+        "CHANGE HEALTH CHAMADO | " +
+        "HP ANTES: " + CurrentHealth +
+        " | MAX HP: " + MaxHealth +
+        " | DANO RECEBIDO: " + amount
+        );
     }
 
 
@@ -110,10 +119,12 @@ public class scrLife : MonoBehaviour{
     public void SetHealthBarVisible()
     {
         HPBar.gameObject.SetActive(true);
+        hpUI.gameObject.SetActive(true);
     }
 
     public void SetHealthBarInvisible()
     {
         HPBar.gameObject.SetActive(false);
+        hpUI.gameObject.SetActive(false);
     }
 }

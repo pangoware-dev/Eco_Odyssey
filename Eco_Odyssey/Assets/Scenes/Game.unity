@@ -139,6 +139,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -171,6 +172,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -348,6 +350,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+    - target: {fileID: 4268651827665060257, guid: b705bf222e2f5d04c89c980679809550, type: 3}
+      propertyPath: globalStatus
+      value: 
+      objectReference: {fileID: 529871715}
     - target: {fileID: 6363234232674965025, guid: b705bf222e2f5d04c89c980679809550, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -433,6 +439,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+    - target: {fileID: 2813075544325763564, guid: 81c1aa9f5d29a1c4aaeaa69e9a6cf2f7, type: 3}
+      propertyPath: globalStatus
+      value: 
+      objectReference: {fileID: 529871715}
     - target: {fileID: 6030321606929232232, guid: 81c1aa9f5d29a1c4aaeaa69e9a6cf2f7, type: 3}
       propertyPath: m_Name
       value: Venora
@@ -522,6 +532,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+    - target: {fileID: 1608489272334599547, guid: b3326f7de8d89094786eb4e2fa36e968, type: 3}
+      propertyPath: globalStatus
+      value: 
+      objectReference: {fileID: 529871715}
     - target: {fileID: 2010409441292779008, guid: b3326f7de8d89094786eb4e2fa36e968, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -665,10 +679,10 @@ RectTransform:
   - {fileID: 790733218}
   m_Father: {fileID: 1403752754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &257683701
 MonoBehaviour:
@@ -969,6 +983,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+    - target: {fileID: 7631353129701562523, guid: 188cbda4277748a43ac0aeddc496a8b6, type: 3}
+      propertyPath: globalStatus
+      value: 
+      objectReference: {fileID: 529871715}
     m_RemovedComponents:
     - {fileID: 5666129719869734932, guid: 188cbda4277748a43ac0aeddc496a8b6, type: 3}
     m_RemovedGameObjects: []
@@ -1081,6 +1099,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -2293,7 +2312,7 @@ Tilemap:
       - {fileID: -1457828558, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 872277938, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 874404162, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 5.090184
+      m_AnimationSpeed: 4.3695107
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3046,7 +3065,7 @@ Tilemap:
       - {fileID: -12955993, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 214392573, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -933217551, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 3.297274
+      m_AnimationSpeed: 6.6716285
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 8, y: -6, z: 0}
@@ -3061,7 +3080,7 @@ Tilemap:
       - {fileID: 9050774589780060452, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -4024382073413787549, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 8143098205146776124, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 4.5768404
+      m_AnimationSpeed: 4.5204754
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3261,7 +3280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &467076124
 Animator:
   serializedVersion: 7
@@ -3844,12 +3863,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8871922128759142585, guid: 8f479f8b014adb24d8e7136b9230c368, type: 3}
+  m_Sprite: {fileID: -974769724729543079, guid: da26bb8a1f4f4f742952b1a50ae4513d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.0869565, y: 2.0869565}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3893,6 +3912,7 @@ MonoBehaviour:
   HPText: {fileID: 483881048}
   HPTextAnim: {fileID: 467076124}
   PlayerHP: {fileID: 6108660761783692848, guid: 3d4a33f6a3c22754ea54a86423d29445, type: 3}
+  hpUI: {fileID: 467076123}
   Defesa: 0
   D: 0.5
   Damage: 0
@@ -3917,6 +3937,7 @@ MonoBehaviour:
     m_Bits: 64
   ac: {fileID: 529871716}
   playerCollider: {fileID: 529871717}
+  dialogueUI: {fileID: 2116804136}
 --- !u!50 &529871709
 Rigidbody2D:
   serializedVersion: 5
@@ -4007,12 +4028,13 @@ MonoBehaviour:
   - 0
   currentEcoIndex: 0
   currentEco: {fileID: 0}
-  vidaC: 0
   vidaAtual: 0
+  vidaC: 0
   atkC: 0
   defC: 0
   veloC: 0
   levelC: 0
+  quantEco: 0
   animControllerC: {fileID: 0}
   usingEco: 0
   ecoInicial: {fileID: 11400000, guid: 5999f909d1bebed45ae638f357c0985d, type: 2}
@@ -4031,6 +4053,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -21527,7 +21550,7 @@ Tilemap:
       - {fileID: 1302470461, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 936425172, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 1532553440, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 5.8798423
+      m_AnimationSpeed: 5.75986
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -22143,10 +22166,10 @@ RectTransform:
   - {fileID: 1879674137}
   m_Father: {fileID: 1403752754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1086226428
 MonoBehaviour:
@@ -22371,6 +22394,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -22689,10 +22713,10 @@ RectTransform:
   - {fileID: 59499750}
   m_Father: {fileID: 1403752754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 900, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1269088751
 MonoBehaviour:
@@ -22796,6 +22820,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -22828,6 +22853,7 @@ MonoBehaviour:
   isPlayer: 0
   attackPoint: {fileID: 0}
   damage: 0
+  enemyHealth: {fileID: 0}
   weaponRange: 0.4
   knockbackForce: 10
   playerLayer:
@@ -23593,6 +23619,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+    - target: {fileID: 4134015794055399591, guid: d71bc2d526d286349864ec56e506431c, type: 3}
+      propertyPath: globalStatus
+      value: 
+      objectReference: {fileID: 529871715}
     - target: {fileID: 5365768261400590059, guid: d71bc2d526d286349864ec56e506431c, type: 3}
       propertyPath: m_Name
       value: Wotter
@@ -24170,14 +24200,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: conversations.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: 'conversations.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 94ea3fb57d50b4142a08c19fda97c833, type: 2}
+      objectReference: {fileID: 11400000, guid: d73e72a28a7604d4fab0166b0e3a9649, type: 2}
     - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: 'conversations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 94ea3fb57d50b4142a08c19fda97c833, type: 2}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: 'conversations.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: 8beb1d17f2f18604a8f447475c337c74, type: 2}
     - target: {fileID: 7640068952257287592, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
@@ -24545,10 +24579,10 @@ RectTransform:
   - {fileID: 1932268833}
   m_Father: {fileID: 1403752754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 600, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1968552587
 MonoBehaviour:
@@ -24652,6 +24686,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6475143681102602673, guid: dc7dcc9d2147f4c489ebff538fc70c6d, type: 3}
+    - target: {fileID: 2970579166952694250, guid: 37a5d0f71c0ecbf4e89cb434d6dfbef9, type: 3}
+      propertyPath: globalStatus
+      value: 
+      objectReference: {fileID: 529871715}
     - target: {fileID: 5631273715923010530, guid: 37a5d0f71c0ecbf4e89cb434d6dfbef9, type: 3}
       propertyPath: m_Name
       value: Tunado
@@ -24747,7 +24785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!225 &2116804137
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -24994,6 +25032,10 @@ PrefabInstance:
       propertyPath: dialogueSO
       value: 
       objectReference: {fileID: 11400000, guid: 6c552c51c4cfbaf4bb612d265010b3ba, type: 2}
+    - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
+      propertyPath: currentConversation
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7539682186599059160, guid: 96ce1400958b979468954b722c7cfaf3, type: 3}
       propertyPath: conversations.Array.size
       value: 1

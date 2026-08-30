@@ -106,7 +106,7 @@ public class scrChase : MonoBehaviour
             }
             direction=(transform.position-player.position).normalized;
             }
-            speed = (ecoSpeed+15*Mathf.Sqrt(ecoComp.ecoData.Level))/10;
+            speed = (ecoComp.ecoData.Velocidade + 15 * Mathf.Sqrt(health.level)) / 10;
             rb.linearVelocity=direction*speed;
     }
 
