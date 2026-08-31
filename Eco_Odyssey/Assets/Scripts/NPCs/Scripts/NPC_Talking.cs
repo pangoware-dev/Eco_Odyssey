@@ -10,6 +10,7 @@ public class NPC_Talking : MonoBehaviour
     public List<DialogueSO> conversations;
     public DialogueSO currentConversation;
     private scrPlayer player;
+    private NPC_Trainer currentTrainer;
 
     private void Awake()
     {
@@ -17,6 +18,15 @@ public class NPC_Talking : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<scrPlayer>();
+        currentTrainer = GetComponent<NPC_Trainer>();
+
+        /* if(currentTrainer!=null){
+            DialogueManager.Instance.StartDialogue(currentConversation, currentTrainer);
+        }
+        else if(currentConversation!=null)
+        {
+            DialogueManager.Instance.StartDialogue(currentConversation);
+        } */
     }
 
     private void OnEnable()
@@ -47,7 +57,7 @@ public class NPC_Talking : MonoBehaviour
 
             if (currentConversation != null)
             {
-                DialogueManager.Instance.StartDialogue(currentConversation);
+                DialogueManager.Instance.StartDialogue(currentConversation, currentTrainer);
             }
         }
     }

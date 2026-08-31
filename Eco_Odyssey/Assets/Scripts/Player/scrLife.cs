@@ -16,7 +16,7 @@ public class scrLife : MonoBehaviour{
 
     private BlinkingSprite blink;
     public int Defesa;
-    public float D, Damage;
+    public float D, damage;
 
 
     // START
@@ -66,7 +66,7 @@ public class scrLife : MonoBehaviour{
         globalStatus.currentEco.Element1,
         globalStatus.currentEco.Element2);
 
-        float damage = amount - Defesa * D/3;
+        damage = amount / (Defesa/10) *D;
         damage = Mathf.Max(damage, 1);
 
         CurrentHealth -= Mathf.CeilToInt(Mathf.CeilToInt(damage)*effectiveness);
@@ -76,11 +76,6 @@ public class scrLife : MonoBehaviour{
 
         // Salva o HP no slot do Eco
         globalStatus.SaveCurrentEcoHealth(CurrentHealth);
-
-
-        /* if (HPTextAnim != null){
-            HPTextAnim.Play("HP_Animation");
-        } */
 
 
         UpdateHPText();
@@ -98,12 +93,6 @@ public class scrLife : MonoBehaviour{
                 player.EcoDied();
             }
         }
-        Debug.Log(
-        "CHANGE HEALTH CHAMADO | " +
-        "HP ANTES: " + CurrentHealth +
-        " | MAX HP: " + MaxHealth +
-        " | DANO RECEBIDO: " + amount
-        );
     }
 
 

@@ -9,6 +9,7 @@ public class scrChase : MonoBehaviour
     private EnemyState enemyState;
 
     private scrEnemyEco ecoComp;
+    private levelCheck levelCheck;
 
     public float attackRange = 2.1f;
     private int inDodgeRange=0;
@@ -27,15 +28,11 @@ public class scrChase : MonoBehaviour
     {
         ecoComp = GetComponent<scrEnemyEco>();
         health = GetComponent<scrEHealth>();
+        levelCheck = GetComponent<levelCheck>();
 
         rb=GetComponent<Rigidbody2D>();
         anim=GetComponent<Animator>();
         ChangeState(EnemyState.Idle);
-
-        if (ecoComp != null && ecoComp.ecoData != null)
-        {
-            ecoSpeed = ecoComp.ecoData.Velocidade;
-        }
 }
 
     void FixedUpdate()
@@ -106,7 +103,7 @@ public class scrChase : MonoBehaviour
             }
             direction=(transform.position-player.position).normalized;
             }
-            speed = (ecoComp.ecoData.Velocidade + 15 * Mathf.Sqrt(health.level)) / 10;
+            speed = levelCheck.speed;
             rb.linearVelocity=direction*speed;
     }
 

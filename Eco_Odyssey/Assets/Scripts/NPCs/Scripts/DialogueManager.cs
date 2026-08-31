@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
 
     private DialogueSO currentDialogue;
+    public NPC_Trainer currentTrainer;
     private int dialogueIndex = 0;
 
     private bool choosingOption = false;
@@ -63,12 +64,16 @@ public class DialogueManager : MonoBehaviour
         // o Slash é controlado pelo scrPlayer.
     }
 
-    public void StartDialogue(DialogueSO dialogue)
+    public void StartDialogue(DialogueSO dialogue, NPC_Trainer trainer = null)
     {
         if (dialogue == null)
             return;
 
+        ClearChoices();
+
         currentDialogue = dialogue;
+        currentTrainer = trainer;
+
         dialogueIndex = 0;
 
         isDialogueActive = true;
@@ -128,22 +133,21 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+            for (int i = 0; i < currentDialogue.options.Length; i++)
+            {
+                var option = currentDialogue.options[i];
 
-        for (int i = 0; i < currentDialogue.options.Length; i++)
-        {
-            var option = currentDialogue.options[i];
+                choiceButtons[i].GetComponentInChildren<TMP_Text>().text =
+                    option.optionText;
 
-            choiceButtons[i].GetComponentInChildren<TMP_Text>().text =
-                option.optionText;
+                choiceButtons[i].gameObject.SetActive(true);
 
-            choiceButtons[i].gameObject.SetActive(true);
+                DialogueSO nextDialogue = option.nextDialogue;
 
-            DialogueSO nextDialogue = option.nextDialogue;
-
-            choiceButtons[i].onClick.AddListener(
-                () => ChooseOption(nextDialogue)
-            );
-        }
+                choiceButtons[i].onClick.AddListener(
+                    () => ChooseOption(nextDialogue)
+                );
+            }
 
         // Seleciona automaticamente a primeira opção
         EventSystem.current.SetSelectedGameObject(
@@ -193,8 +197,22 @@ public class DialogueManager : MonoBehaviour
         {
             ClearChoices();
 
-            StartDialogue(nextDialogue);
+            //StartDialogue(nextDialogue);
+            StartCoroutine(StartNextDialogue(nextDialogue));
         }
+
+        if (nextDialogue.isBattle==true)
+        {
+            StartBattle();
+        }
+    }
+
+    private IEnumerator StartNextDialogue(DialogueSO nextDialogue)
+    {
+        // Espera o frame atual terminar
+        yield return new WaitForEndOfFrame();
+
+        StartDialogue(nextDialogue);
     }
 
     private void EndDialogue()
@@ -223,6 +241,15 @@ public class DialogueManager : MonoBehaviour
         {
             button.onClick.RemoveAllListeners();
             button.gameObject.SetActive(false);
+        }
+    }
+
+    void StartBattle()
+    {
+        Debug.Log("Iniciar Batalha");
+        if (currentTrainer != null)
+        {
+            currentTrainer.StartBattle();
         }
     }
 }

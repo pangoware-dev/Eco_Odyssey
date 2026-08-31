@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: d8c89be281044454e89b1dc0d041aa34
+guid: d361893dbcff2d14ea6de66ac8cb399c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5756730809003982639
-    second: Andar_Baixo_Sheet_0
+      213: 2977235875330159954
+    second: Asol_anda_baixo-export_0
+  - first:
+      213: -5460347571717941436
+    second: Asol_anda_baixo-export_1
+  - first:
+      213: -9053865767268284206
+    second: Asol_anda_baixo-export_2
+  - first:
+      213: 4526066886911015552
+    second: Asol_anda_baixo-export_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,8 +83,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,35 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Andar_Baixo_Sheet_0
+      name: Walk_Down_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2fba3a9b2404ef40800000000000000
-      internalID: 5756730809003982639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andar_Baixo_Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 0
-        width: 12
-        height: 24
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04445e786c8af0c4ea99d863e7d6d5ff
-      internalID: 1145167518
+      spriteID: e4b93281af75a474ebcaeb4f37a48136
+      internalID: 982847689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Andar_Baixo_Sheet_2
+      name: Walk_Down_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 32
         y: 0
-        width: 12
-        height: 24
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc784983a23ff0241acb7935f6378dbd
-      internalID: -858070468
+      spriteID: 1669a994b4442f840b68592d1eacdbd5
+      internalID: 831440679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Andar_Baixo_Sheet_3
+      name: Walk_Down_2
       rect:
         serializedVersion: 2
-        x: 36
+        x: 64
         y: 0
-        width: 12
-        height: 24
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5623b75d7872364c94bca77ecba49ac
-      internalID: -49044218
+      spriteID: f6f34c5beba03d246b9822791ba3db3e
+      internalID: 1661898930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Andar_Baixo_Sheet_4
+      name: Walk_Down_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 96
         y: 0
-        width: 12
-        height: 24
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,74 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57363c4fe2d97a94f8625852c23837f6
-      internalID: 39518208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andar_Baixo_Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 12
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2027218586ceec248a923de8268ae102
-      internalID: 902845336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andar_Baixo_Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 12
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a07892e94fc823438894826a08e86b2
-      internalID: 1407369147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Andar_Baixo_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 12
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b510a1d1c352390409260028ef9242c7
-      internalID: -1300171371
+      spriteID: c2504ef4052c2404ebdb3b2f49330501
+      internalID: -1696289714
       vertices: []
       indices: 
       edges: []
@@ -279,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a4eccb9679a99a04cbee516eb763038e
+    spriteID: 7e2ff729305b06c439cd66eb25ff8075
     internalID: 0
     vertices: []
     indices: 
@@ -289,16 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":12.0,"y":24.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Andar_Baixo_Sheet_0: 5756730809003982639
-      Andar_Baixo_Sheet_1: 1145167518
-      Andar_Baixo_Sheet_2: -858070468
-      Andar_Baixo_Sheet_3: -49044218
-      Andar_Baixo_Sheet_4: 39518208
-      Andar_Baixo_Sheet_5: 902845336
-      Andar_Baixo_Sheet_6: 1407369147
-      Andar_Baixo_Sheet_7: -1300171371
+      Walk_Down_0: 982847689
+      Walk_Down_1: 831440679
+      Walk_Down_2: 1661898930
+      Walk_Down_3: -1696289714
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: f95d8b41aa2045c4598ca80e6add2790
+guid: ff29a316ec0e8924491cd881b1383686
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4901497829725854540
-    second: Sol_Cima_Idle-Sheet_0
+      213: -3852740795332221488
+    second: sol_idle_esquerda-export_0
   - first:
-      213: -2947854882394362900
-    second: Sol_Cima_Idle-Sheet_1
+      213: -8489275488087345328
+    second: sol_idle_esquerda-export_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sol_Cima_Idle-Sheet_0
+      name: Idle_Left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -116,16 +116,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c4b58209e4e950440800000000000000
-      internalID: 4901497829725854540
+      spriteID: 0c38ef61bd74e7e478273c8e24f21df8
+      internalID: -1319315142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sol_Cima_Idle-Sheet_1
+      name: Idle_Left_1
       rect:
         serializedVersion: 2
         x: 32
@@ -138,10 +138,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cebab755a9d1717d0800000000000000
-      internalID: -2947854882394362900
+      spriteID: a3456a290c2bb1a4bb8760b4c994df73
+      internalID: -420955551
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e36faf9d7168e2243a188404d14e1266
+    spriteID: 4c97f62aa7d0ee84594e80ce9c309874
     internalID: 0
     vertices: []
     indices: 
@@ -162,8 +162,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sol_Cima_Idle-Sheet_0: 4901497829725854540
-      Sol_Cima_Idle-Sheet_1: -2947854882394362900
+      Idle_Left_0: -1319315142
+      Idle_Left_1: -420955551
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
