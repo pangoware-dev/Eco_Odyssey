@@ -40,12 +40,21 @@ public class scrCaptureSystem : MonoBehaviour
 
         if (enemy != null)
         {
-            Debug.Log("Inimigo encontrado!");
+            scrEnemyEco eco = enemy.GetComponent<scrEnemyEco>();
 
-            currentEnemy = enemy.gameObject;
-            captureUI.SetActive(true);
-            captureBar.StartBar(currentEnemy);
-            isCapturing = true;
+            if (eco.isTamed==false)
+            {
+                Debug.Log("Inimigo encontrado!");
+
+                currentEnemy = enemy.gameObject;
+                captureUI.SetActive(true);
+                captureBar.StartBar(currentEnemy);
+                isCapturing = true;
+            }
+            else
+            {
+                Debug.Log("Eco já foi domado");
+            }
         }
         else
         {

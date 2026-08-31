@@ -35,6 +35,7 @@ public class NPC_Trainer : MonoBehaviour
     public int quantEco;
 
     public RuntimeAnimatorController animControllerC;
+    public RuntimeAnimatorController animControllerNPC;
     public bool usingEco = false;
 
     public void Start()
@@ -72,13 +73,26 @@ public class NPC_Trainer : MonoBehaviour
                 break;
             }
         }
+        usingEco=false;
+    }
 
+    void Update()
+    {
+        if (trainCol.enabled==false && (Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.DownArrow)||Input.GetKeyDown(KeyCode.LeftArrow)||Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            dialogueCol.enabled=false;
+        }
 
+        if (chase.enabled==true)
+        {
+            npc_Patrol.enabled=false;
+        }
     }
 
     public void StartBattle()
     {
         usingEco = true;
+        gameObject.layer = LayerMask.NameToLayer("Enemy");
 
         //Ativar eco
         ecoCol.enabled=true;
@@ -92,10 +106,50 @@ public class NPC_Trainer : MonoBehaviour
 
         //Desativar NPC
         trainCol.enabled=false;
-        dialogueCol.enabled=false;
-        //npc.enabled=false;
+        npc.enabled=false;
         npc_Patrol.enabled=false;
-        //npc_Talking.enabled=false;
+        ChangeAnimator();
+
+        eHealth.currentHP=eHealth.maxHP;
+    }
+
+    public void EndBattle()
+    {
+        usingEco = false;
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
+        //Ativar eco
+        ecoCol.enabled=false;
+        chase.enabled=false;
+        eHealth.enabled=false;
+        eKB.enabled=false;
+        eEco.enabled=false;
+        levelCheck.enabled=false;
+        animControl.enabled=false;
+        
+
+        //Desativar NPC
+        trainCol.enabled=true;
+        dialogueCol.enabled=true;
+        npc.enabled=true;
+        npc_Patrol.enabled=true;
+
+        ChangeAnimator();
+
+    }
+    
+
+    public void ChangeAnimator()
+    {
+        if (usingEco==true)
+        {
+            anim.runtimeAnimatorController = currentEco.animControllerEco;
+        }
+        else if(usingEco==false)
+        {
+            anim.runtimeAnimatorController = animControllerNPC;
+
+        }
     }
 
 
@@ -174,7 +228,7 @@ public class NPC_Trainer : MonoBehaviour
             return 0;
 
         // Ajuste esta fórmula conforme seu sistema
-        return (ecoParty[index].Vida + 2 * Mathf.Sqrt(levelCheck.hp)) * 10;
+        return (ecoParty[index].Vida + 2 * Mathf.Sqrt(levelCheck.level)) * 10;
     }
 
 
@@ -216,22 +270,26 @@ public class NPC_Trainer : MonoBehaviour
                 return i;
             }
         }
+    
+        Debug.Log("Todos os Ecos morreram!");
+        EndBattle();
 
         // Nenhum Eco vivo
         return -1;
     }
 
     /* void ApplyEcoStats(){
-        scrEHealth eHealth = GetComponent<scrEHealth>();
+
+        ecoSpeed = globalStatus.veloC;
 
         speed = (ecoSpeed + 15 * Mathf.Sqrt( globalStatus.levelC)) / 10;
 
-        scrEHealth.MaxHealth = levelCheck.hp;
+        life.MaxHealth = globalStatus.vidaC;
 
-        scrEHealth.CurrentHealth = globalStatus.vidaAtual;
+        life.CurrentHealth = globalStatus.vidaAtual;
 
-        scrEHealth.UpdateHPText();
+        life.UpdateHPText();
 
-        anim.runtimeAnimatorController = ecoComp.EcoData.animController;
+        anim.runtimeAnimatorController = globalStatus.animControllerC;
     } */
 }

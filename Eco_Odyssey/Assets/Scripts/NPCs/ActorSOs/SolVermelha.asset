@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SolVermelha
   m_EditorClassIdentifier: Assembly-CSharp::ActorSO
   actorName: Sol Vermelha
-  portrait: {fileID: 5354240762080026822, guid: c5c872d61ac56f547b66308ea0a66e12, type: 3}
+  portrait: {fileID: 982847689, guid: d361893dbcff2d14ea6de66ac8cb399c, type: 3}

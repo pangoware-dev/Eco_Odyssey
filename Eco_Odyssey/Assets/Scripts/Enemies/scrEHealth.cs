@@ -9,6 +9,7 @@ public class scrEHealth : MonoBehaviour{
     private scrEnemyEco ecoComp;
     private levelCheck levelCheck;
     private BlinkingSprite blink;
+    private NPC_Trainer npc_Trainer;
     public GameObject EnemyHP;
     private Slider HPBar;
 
@@ -17,6 +18,7 @@ public class scrEHealth : MonoBehaviour{
     void Start(){
         ecoComp = GetComponent<scrEnemyEco>();
         levelCheck = GetComponent<levelCheck>();
+        npc_Trainer = GetComponent<NPC_Trainer>();
         D = 1f;
 
         maxHP = levelCheck.hp;
@@ -55,7 +57,7 @@ public class scrEHealth : MonoBehaviour{
 
     public void MaxHPLevel()
     {
-        if (!HPBar.gameObject.activeSelf)
+        if (!HPBar.gameObject.activeSelf&&ecoComp.isTamed==false)
         {
             currentHP = maxHP;
         }
@@ -77,13 +79,25 @@ public class scrEHealth : MonoBehaviour{
         Debug.Log("Defesa Inimigo: "+def);
         blink.Blink();
 
+        if (ecoComp.isTamed==true)
+        {
+            npc_Trainer.SaveCurrentEcoHealth(currentHP);
+        }
+
         if(currentHP > maxHP)
         {
             currentHP = maxHP;
-        }
-        if (currentHP <= 0)
+        }else if (currentHP <= 0&&ecoComp.isTamed==false)
         {
             currentHP=1;
+            HPBar.gameObject.SetActive(false);
+        }
+        else if(currentHP <= 0&&ecoComp.isTamed==true)
+        {
+            currentHP=0;
+            npc_Trainer.SaveCurrentEcoHealth(0);
+            npc_Trainer.GetNextAliveEco();
+            HPBar.gameObject.SetActive(false);
         }
     }
 }
