@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 2813075544325763564}
   - component: {fileID: 5747659345221625012}
   - component: {fileID: 3347505621795307987}
+  - component: {fileID: 4772088670111184886}
   m_Layer: 6
   m_Name: Venora
   m_TagString: Enemy
@@ -252,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::scrEHealth
   currentHP: 10
   maxHP: 10
+  level: 5
   EnemyHP: {fileID: 7725038839951121530, guid: 4ffd71e7adbe2354b8bf23d80598bb1c, type: 3}
   globalStatus: {fileID: 0}
   D: 0.4
@@ -281,6 +283,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scrEnemyEco
   ecoData: {fileID: 11400000, guid: d9dc6daab0e278f4eaca8d6e6d545140, type: 2}
+--- !u!114 &4772088670111184886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6030321606929232232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa07435f0ccf4fb43ba9c449558f7211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::levelCheck
+  speed: 0
+  def: 0
+  atk: 0
+  hp: 0
 --- !u!1 &6909673797065301753
 GameObject:
   m_ObjectHideFlags: 0

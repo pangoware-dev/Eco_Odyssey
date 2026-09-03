@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: bc6b83ddf6c184e4fbc6eea6b3bd2cbf
+guid: a787cef13e527a34abc7e6c167c09ebb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4196827833735184153
-    second: Idle_Direita_0
+      213: -6266773929554896114
+    second: Asol_anda_direita_0
   - first:
-      213: -7104190692687571903
-    second: Idle_Direita_1
+      213: 7146438660228027335
+    second: Asol_anda_direita_1
   - first:
-      213: 5898375189603248828
-    second: Idle_Direita_2
+      213: 359633693798734932
+    second: Asol_anda_direita_2
   - first:
-      213: -8364232046521178205
-    second: Idle_Direita_3
+      213: 6530999562006327553
+    second: Asol_anda_direita_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,8 +83,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Direita_0
+      name: Walk_Righr_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7e00eba225fd1c5c0800000000000000
-      internalID: -4196827833735184153
+      spriteID: 8031cb5e22052d44b9dddc7897b8ca6f
+      internalID: -1607473796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Direita_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14498b16438d86d90800000000000000
-      internalID: -7104190692687571903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Direita_2
+      name: Walk_Righr_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cba6748ebfc3bd150800000000000000
-      internalID: 5898375189603248828
+      spriteID: fbb271424a06fd84b96496e0d80ccbc8
+      internalID: 1771382653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Direita_3
+      name: Walk_Righr_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3a7aa20f4474ceb80800000000000000
-      internalID: -8364232046521178205
+      spriteID: d5c990299894a8b4d82c130dc8a05bcb
+      internalID: -983440811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Righr_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7e5972270653a4d956cb8cdb634452
+      internalID: 1229145217
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f0d6ce62246aba74da96b88ab07d514c
+    spriteID: 27dffc6691b2d4549bfe537983d57f6c
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle_Direita_0: -4196827833735184153
-      Idle_Direita_1: -7104190692687571903
-      Idle_Direita_2: 5898375189603248828
-      Idle_Direita_3: -8364232046521178205
+      Walk_Righr_0: -1607473796
+      Walk_Righr_1: 1771382653
+      Walk_Righr_2: -983440811
+      Walk_Righr_3: 1229145217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,6 +9,7 @@ public class DialogueSO : ScriptableObject
     [Header("Requerimentos condicionais (Opcional)")]
     public ActorSO[] requiredNPCs;
     public LocationSO[] requiredLocations;
+    public bool isBattle;
     //public ItemsSO[] requiredItems;
 
     public bool isConditionMet()

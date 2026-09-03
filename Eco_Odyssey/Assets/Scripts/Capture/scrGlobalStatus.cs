@@ -49,7 +49,7 @@ public class scrGlobalStatus : MonoBehaviour
             return 0;
         }
 
-        return (eco.Vida + 2 * Mathf.Sqrt(levelC)) * 10;
+        return Mathf.CeilToInt((eco.Vida + 2 * Mathf.Sqrt(levelC)) * 10);
     }
 
 
@@ -64,7 +64,7 @@ public class scrGlobalStatus : MonoBehaviour
             return 0;
         }
 
-        return (eco.Ataque + 2 * Mathf.Sqrt(levelC)) * 10;
+        return Mathf.CeilToInt((eco.Ataque + 2 * Mathf.Sqrt(levelC)) * 10);
     }
 
 
@@ -79,7 +79,7 @@ public class scrGlobalStatus : MonoBehaviour
             return 0;
         }
 
-        return (eco.Defesa + 2 * Mathf.Sqrt(levelC)) * 10;
+        return Mathf.CeilToInt((eco.Defesa + 2 * Mathf.Sqrt(levelC)) * 10);
     }
 
 

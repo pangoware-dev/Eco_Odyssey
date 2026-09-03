@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sol
   m_EditorClassIdentifier: Assembly-CSharp::ActorSO
   actorName: Sol
-  portrait: {fileID: -8871922128759142585, guid: 8f479f8b014adb24d8e7136b9230c368, type: 3}
+  portrait: {fileID: -1595749773, guid: 065bbb8a15c1f084684a0cd757721bf5, type: 3}

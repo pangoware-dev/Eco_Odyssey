@@ -51,6 +51,14 @@ public class scrPlayer : MonoBehaviour{
             //Interact();
         }
 
+        if (Input.GetButtonDown("Defend") && PlayerMode == 1){
+            Defend();
+        }
+        if (Input.GetButtonUp("Defend") && PlayerMode == 1){
+            speed=ecoSpeed;
+            life.D=1f;
+        }
+
 
         if (anim.GetBool("isAttacking") == false){
             input.x = Input.GetAxisRaw("Horizontal");
@@ -247,6 +255,12 @@ public class scrPlayer : MonoBehaviour{
         }
     }
 
+    public void Defend()
+    {
+        life.D=0.4f;
+        speed=speed/2;
+    }
+
 
     // APLICAR STATUS DO ECO
     void ApplyEcoStats(){
@@ -254,7 +268,7 @@ public class scrPlayer : MonoBehaviour{
 
         ecoSpeed = globalStatus.veloC;
 
-        speed = (ecoSpeed + 15 * Mathf.Sqrt( globalStatus.levelC)) / 10;
+        speed = Mathf.CeilToInt((ecoSpeed + 15 * Mathf.Sqrt( globalStatus.levelC)) / 10);
 
         life.MaxHealth = globalStatus.vidaC;
 

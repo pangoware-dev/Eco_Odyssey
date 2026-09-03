@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: da26bb8a1f4f4f742952b1a50ae4513d
+guid: 5d17fc1b72e2e3d4a917c5a2e547a764
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -974769724729543079
-    second: Sol_Baixo-Sheet-export_0
+      213: -3079488847413475042
+    second: Asol_idle_direita1_0
   - first:
-      213: 8227638695089025616
-    second: Sol_Baixo-Sheet-export_1
+      213: 401918440926620443
+    second: Asol_idle_direita1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sol_Baixo-Sheet-export_0
+      name: Asol_idle_direita1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 956b0b3991ce872f0800000000000000
-      internalID: -974769724729543079
+      spriteID: e19842885357345d0800000000000000
+      internalID: -3079488847413475042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sol_Baixo-Sheet-export_1
+      name: Asol_idle_direita1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0523a012dc17e2270800000000000000
-      internalID: 8227638695089025616
+      spriteID: b1b2c1c41b6e39500800000000000000
+      internalID: 401918440926620443
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6661e3aef9db1df4bbf1d8ce98a2565a
+    spriteID: 0e9ca499419895c4d99133784b0e52a0
     internalID: 0
     vertices: []
     indices: 
@@ -162,8 +162,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sol_Baixo-Sheet-export_0: -974769724729543079
-      Sol_Baixo-Sheet-export_1: 8227638695089025616
+      Asol_idle_direita1_0: -3079488847413475042
+      Asol_idle_direita1_1: 401918440926620443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 3ddf677ad97e3d54eb81fa58a08f7f4a
+guid: 3f0b8d770b1a883428fdbc4144384a44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6821284523066387231
-    second: Asol_anda_cima_0
+      213: -9194118732496575524
+    second: sol_idle_cima_porra_0
   - first:
-      213: -8334622166273850832
-    second: Asol_anda_cima_1
-  - first:
-      213: 9048460146264737457
-    second: Asol_anda_cima_2
-  - first:
-      213: 2003978664949334503
-    second: Asol_anda_cima_3
+      213: -4381934161505370598
+    second: sol_idle_cima_porra_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_Up_0
+      name: Idle_Up_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f28ed3d47eb99040a8cf723a29d8701
-      internalID: -1732355450
+      spriteID: 446b9b907cfe61b4193890137d23d4c6
+      internalID: -1980686951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Up_1
+      name: Idle_Up_1
       rect:
         serializedVersion: 2
         x: 32
@@ -146,52 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d8f19a61600f894292775dc2b6762b4
-      internalID: 1275085855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_Up_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e17c75dad90e72e42842866938b6914b
-      internalID: -1510274630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_Up_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad557b153b9f40e4aad9ec9dc134071c
-      internalID: -1264718905
+      spriteID: 063a1cea77c8ecf4cb3de99dcd83ea6c
+      internalID: -837648137
       vertices: []
       indices: 
       edges: []
@@ -200,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e12c1184d2a9de9418414587f5167be2
+    spriteID: aa16ca481a960af4282d0009a3728046
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +160,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Walk_Up_0: -1732355450
-      Walk_Up_1: 1275085855
-      Walk_Up_2: -1510274630
-      Walk_Up_3: -1264718905
+      Idle_Up_0: -1980686951
+      Idle_Up_1: -837648137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
