@@ -2362,7 +2362,7 @@ Tilemap:
       - {fileID: -1457828558, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 872277938, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 874404162, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 4.301941
+      m_AnimationSpeed: 3.3282247
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -3172,7 +3172,7 @@ Tilemap:
       - {fileID: -12955993, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 214392573, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -933217551, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 3.6201835
+      m_AnimationSpeed: 5.3597107
       m_AnimationTimeOffset: 2
       m_Flags: 0
   - first: {x: 8, y: -6, z: 0}
@@ -3187,7 +3187,7 @@ Tilemap:
       - {fileID: 9050774589780060452, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: -4024382073413787549, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 8143098205146776124, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 5.183426
+      m_AnimationSpeed: 3.1479917
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -21680,7 +21680,7 @@ Tilemap:
       - {fileID: 1302470461, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 936425172, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
       - {fileID: 1532553440, guid: a29d3cc10b1dfac4e8228ca98aee1a7f, type: 3}
-      m_AnimationSpeed: 4.9295015
+      m_AnimationSpeed: 3.342811
       m_AnimationTimeOffset: 2
       m_Flags: 0
   m_TileAssetArray:
@@ -25435,7 +25435,7 @@ Transform:
   m_GameObject: {fileID: 6523399831317283216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25537,7 +25537,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523399831317283216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa07435f0ccf4fb43ba9c449558f7211, type: 3}
   m_Name: 
@@ -25554,12 +25554,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523399831317283216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f68158b058ee1f46b57ec01bf69c76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scrEnemyEco
-  ecoData: {fileID: 11400000, guid: 65746f43d45db15488af4393b83e2dd8, type: 2}
+  ecoData: {fileID: 0}
   isTamed: 1
 --- !u!114 &9046695639169801093
 MonoBehaviour:
@@ -25568,7 +25568,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523399831317283216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 192c9842fc263af47a90acd567d31061, type: 3}
   m_Name: 
@@ -25580,7 +25580,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6523399831317283216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8af641f70a797594e8e53ec3b49cfbd1, type: 3}
   m_Name: 
@@ -25690,7 +25690,7 @@ MonoBehaviour:
   levelC: 0
   quantEco: 0
   animControllerC: {fileID: 9100000, guid: ed202904959f59248afe922c21799c8c, type: 2}
-  animControllerNPC: {fileID: 9100000, guid: 304e317b3316e3e4a952f7ac95dbd3e8, type: 2}
+  animControllerNPC: {fileID: 9100000, guid: ed202904959f59248afe922c21799c8c, type: 2}
   usingEco: 0
 --- !u!95 &9046695639169801099
 Animator:

@@ -19,9 +19,9 @@ public class levelCheck : MonoBehaviour
     void FixedUpdate()
     {
         level=globalStatus.levelC;
-        speed = (ecoComp.ecoData.Velocidade + 15 * Mathf.Sqrt(level)) / 10;
-        def=(ecoComp.ecoData.Defesa+2*Mathf.Sqrt(level))*10;
-        atk=(ecoComp.ecoData.Ataque+2*Mathf.Sqrt(level))*10;
-        hp=(ecoComp.ecoData.Vida+2*Mathf.Sqrt(level))*10;
+        speed = Mathf.CeilToInt((ecoComp.ecoData.Velocidade + 15 * Mathf.Sqrt(level)) / 10);
+        def=Mathf.CeilToInt((ecoComp.ecoData.Defesa+2*Mathf.Sqrt(level))*10);
+        atk=Mathf.CeilToInt((ecoComp.ecoData.Ataque+2*Mathf.Sqrt(level))*10);
+        hp=Mathf.CeilToInt((ecoComp.ecoData.Vida+2*Mathf.Sqrt(level))*10);
     }
 }

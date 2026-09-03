@@ -85,7 +85,6 @@ public class scrAnimationControl : MonoBehaviour
                     if (ecoComp != null && ecoComp.ecoData != null)
                     {
                         life.ChangeHealth(damage, ecoComp.ecoData);
-                        Debug.Log("Eco Inimigo: "+ecoComp.ecoData.name);
                     }
                 }
                 

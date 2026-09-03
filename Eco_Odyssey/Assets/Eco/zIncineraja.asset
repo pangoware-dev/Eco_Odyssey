@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: zIncineraja
   m_EditorClassIdentifier: Assembly-CSharp::scrEcoFather
   Ataque: 20
-  Defesa: 0
-  Vida: 0
-  Velocidade: 0
+  Defesa: 10
+  Vida: 10
+  Velocidade: 20
+  VidaAtual: 0
   Level: 40
   animControllerEco: {fileID: 9100000, guid: e21c5f440c27fa544abf8f550a122b94, type: 2}
   nome: Incineraja

@@ -96,8 +96,29 @@ public class scrEHealth : MonoBehaviour{
         {
             currentHP=0;
             npc_Trainer.SaveCurrentEcoHealth(0);
-            npc_Trainer.GetNextAliveEco();
+            int nextEco = npc_Trainer.GetNextAliveEco();
             HPBar.gameObject.SetActive(false);
+
+            if (nextEco != -1)
+            {
+                // Equipa o próximo Eco
+                npc_Trainer.EquipEco(nextEco);
+
+                // Atualiza a vida do novo Eco
+                maxHP = levelCheck.hp;
+                currentHP = npc_Trainer.vidaAtual;
+
+                // Atualiza a animação
+                npc_Trainer.ChangeAnimator();
+
+                Debug.Log("Próximo Eco: " + npc_Trainer.currentEco.name);
+            }
+            else
+            {
+                Debug.Log("Todos os Ecos do treinador foram derrotados!");
+
+                npc_Trainer.EndBattle();
+            }
         }
     }
 }

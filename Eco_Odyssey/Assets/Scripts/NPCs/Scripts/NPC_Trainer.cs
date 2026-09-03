@@ -50,7 +50,6 @@ public class NPC_Trainer : MonoBehaviour
         eEco = GetComponent<scrEnemyEco>();
         animControl = GetComponent<scrAnimationControl>();
 
-
         quantEco = 0;
 
         for (int i = 0; i < ecoParty.Length; i++)
@@ -59,7 +58,6 @@ public class NPC_Trainer : MonoBehaviour
             {
                 quantEco++;
 
-                // Se o Eco começa com HP cheio
                 vidaAtualParty[i] = CalcularVidaMaxima(i);
             }
         }
@@ -73,7 +71,8 @@ public class NPC_Trainer : MonoBehaviour
                 break;
             }
         }
-        usingEco=false;
+
+        usingEco = false;
     }
 
     void Update()
@@ -94,23 +93,27 @@ public class NPC_Trainer : MonoBehaviour
         usingEco = true;
         gameObject.layer = LayerMask.NameToLayer("Enemy");
 
+        //Cura a Party
+        HealParty();
+
+        //Seleciona o Eco
+        currentEcoIndex = 0;
+        EquipEco(currentEcoIndex);
+        ChangeAnimator();
+
+        //Altera sua vida para a vida máxima
+        eHealth.currentHP=eHealth.maxHP;
+
         //Ativar eco
         ecoCol.enabled=true;
-        chase.enabled=true;
-        eHealth.enabled=true;
-        eKB.enabled=true;
-        eEco.enabled=true;
-        levelCheck.enabled=true;
         animControl.enabled=true;
+        chase.enabled=true;
         
 
         //Desativar NPC
         trainCol.enabled=false;
         npc.enabled=false;
         npc_Patrol.enabled=false;
-        ChangeAnimator();
-
-        eHealth.currentHP=eHealth.maxHP;
     }
 
     public void EndBattle()
@@ -118,24 +121,22 @@ public class NPC_Trainer : MonoBehaviour
         usingEco = false;
         gameObject.layer = LayerMask.NameToLayer("Default");
 
-        //Ativar eco
+        //Desativar eco
         ecoCol.enabled=false;
         chase.enabled=false;
-        eHealth.enabled=false;
-        eKB.enabled=false;
-        eEco.enabled=false;
-        levelCheck.enabled=false;
         animControl.enabled=false;
         
 
-        //Desativar NPC
+        //Ativar NPC
         trainCol.enabled=true;
         dialogueCol.enabled=true;
         npc.enabled=true;
         npc_Patrol.enabled=true;
 
         ChangeAnimator();
-
+        currentEcoIndex = 0;
+        EquipEco(currentEcoIndex);
+        HealParty();
     }
     
 
@@ -159,46 +160,51 @@ public class NPC_Trainer : MonoBehaviour
 
     public bool EquipEco(int index)
     {
-        // Índice inválido
         if (index < 0 || index >= ecoParty.Length)
         {
             Debug.Log("Índice de Eco inválido.");
             return false;
         }
 
-        // Eco morto
-        if (vidaAtualParty[index] <= 0)
+        if (ecoParty[index] == null)
         {
-            Debug.Log(
-                "O Eco do slot " +
-                (index + 1) +
-                " está morto."
-            );
-
+            Debug.Log("Slot vazio.");
             return false;
         }
 
-        // Define o índice atual
+        if (vidaAtualParty[index] <= 0)
+        {
+            Debug.Log("Eco morto.");
+            return false;
+        }
+
         currentEcoIndex = index;
-
-        // Define o Eco atual
         currentEco = ecoParty[index];
+        eEco.ecoData = currentEco;
 
-        // Calcula a vida máxima do Eco
-        vidaC = levelCheck.hp;
-
-        // Recupera o HP salvo daquele slot
-        vidaAtual = vidaAtualParty[index];
-
-        // Outros atributos
-        atkC = levelCheck.atk;
-        defC = levelCheck.def;
-
-        // Velocidade não escala com levelC
+        // Calcula os atributos diretamente para ESTE Eco
+        vidaC = CalcularVidaMaxima(index);
+        atkC = (currentEco.Ataque + 2 * Mathf.Sqrt(levelCheck.level)) * 10;
+        defC = (currentEco.Defesa + 2 * Mathf.Sqrt(levelCheck.level)) * 10;
         veloC = levelCheck.speed;
 
-        // Animação
+        // Recupera o HP salvo
+        vidaAtual = vidaAtualParty[index];
+
         animControllerC = currentEco.animControllerEco;
+
+        // Se o sistema de vida já estiver inicializado
+        if (eHealth != null)
+        {
+            eHealth.maxHP = vidaC;
+            eHealth.currentHP = vidaAtual;
+        }
+
+        Debug.Log(
+            "Eco equipado: " + currentEco.name +
+            " | HP: " + vidaAtual + "/" + vidaC +
+            " | Índice: " + currentEcoIndex
+        );
 
         return true;
     }
@@ -280,16 +286,21 @@ public class NPC_Trainer : MonoBehaviour
 
     /* void ApplyEcoStats(){
 
-        ecoSpeed = globalStatus.veloC;
+        eHealth.maxHP = levelCheck.hp;
 
-        speed = (ecoSpeed + 15 * Mathf.Sqrt( globalStatus.levelC)) / 10;
+        eHealth.currentHP = NPC_Trainer.vidaAtual;
 
-        life.MaxHealth = globalStatus.vidaC;
-
-        life.CurrentHealth = globalStatus.vidaAtual;
-
-        life.UpdateHPText();
-
-        anim.runtimeAnimatorController = globalStatus.animControllerC;
+        anim.runtimeAnimatorController = NPC_Trainer.animControllerC;
     } */
+
+    public void HealParty()
+{
+    for (int i = 0; i < ecoParty.Length; i++)
+    {
+        if (ecoParty[i] != null)
+        {
+            vidaAtualParty[i] = CalcularVidaMaxima(i);
+        }
+    }
+}
 }

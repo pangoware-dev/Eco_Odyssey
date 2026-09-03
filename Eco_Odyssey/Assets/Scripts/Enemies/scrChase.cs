@@ -22,17 +22,19 @@ public class scrChase : MonoBehaviour
     public LayerMask playerLayer;
     private float playerx=0, playery=0;
     private scrEHealth health;
+    private NPC_Trainer npcTrainer;
     Vector2 direction=Vector2.zero;
 
-    void Start()
+    void OnEnable()
     {
         ecoComp = GetComponent<scrEnemyEco>();
         health = GetComponent<scrEHealth>();
         levelCheck = GetComponent<levelCheck>();
+        npcTrainer = GetComponent<NPC_Trainer>();
 
         rb=GetComponent<Rigidbody2D>();
         anim=GetComponent<Animator>();
-        ChangeState(EnemyState.Idle);
+        ChangeState(EnemyState.Moving);
 }
 
     void FixedUpdate()
@@ -103,12 +105,13 @@ public class scrChase : MonoBehaviour
             }
             direction=(transform.position-player.position).normalized;
             }
-            speed = levelCheck.speed;
-            rb.linearVelocity=direction*speed;
+        
+        speed = levelCheck.speed;
+        rb.linearVelocity=direction*speed;
     }
 
     
-        public void CheckForPlayer()
+    public void CheckForPlayer()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, playerDetectRange, playerLayer);
 
@@ -189,5 +192,6 @@ public enum EnemyState
     Idle,
     Moving,
     Attacking,
-    Knockback
+    Knockback,
+    Defending
 }

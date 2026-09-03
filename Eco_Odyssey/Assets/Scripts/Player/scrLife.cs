@@ -16,7 +16,7 @@ public class scrLife : MonoBehaviour{
 
     private BlinkingSprite blink;
     public int Defesa;
-    public float D, damage;
+    public float D, damage, totalDamage;
 
 
     // START
@@ -41,6 +41,7 @@ public class scrLife : MonoBehaviour{
         HPBar = bar.GetComponentInChildren<Slider>();
         HPBar.gameObject.SetActive(false);
         hpUI.gameObject.SetActive(false);
+        D=1f;
     }
 
     public void FixedUpdate()
@@ -56,7 +57,7 @@ public class scrLife : MonoBehaviour{
             return;
         }
 
-        D = 1f;
+        Debug.Log("D: "+D);
 
         Defesa = (int)globalStatus.defC;
 
@@ -68,8 +69,10 @@ public class scrLife : MonoBehaviour{
 
         damage = amount / (Defesa/10) *D;
         damage = Mathf.Max(damage, 1);
+        totalDamage = Mathf.CeilToInt(damage)*effectiveness;
+        totalDamage = Mathf.Clamp(totalDamage, 1, Mathf.Infinity);
 
-        CurrentHealth -= Mathf.CeilToInt(Mathf.CeilToInt(damage)*effectiveness);
+        CurrentHealth -= totalDamage;
         
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
 
