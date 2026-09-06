@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: bcdc0a4ff9da92e439d3fbe5a5d0bd94
+guid: c723938577505f84992420f146e146a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8588887924697410711
-    second: Idle_Esquerda_0
+      213: -1322459044769303592
+    second: Asol_anda_esquerda_0
   - first:
-      213: -1949529135306003863
-    second: Idle_Esquerda_1
+      213: -4050033806821349154
+    second: Asol_anda_esquerda_1
   - first:
-      213: 6015245560745800737
-    second: Idle_Esquerda_2
+      213: 2280607393387378945
+    second: Asol_anda_esquerda_2
   - first:
-      213: -6032492355847086272
-    second: Idle_Esquerda_3
+      213: 6101414113458545774
+    second: Asol_anda_esquerda_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,8 +83,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Esquerda_0
+      name: Walk_Left_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 963d4c830f32ec880800000000000000
-      internalID: -8588887924697410711
+      spriteID: ce70da950541afd4b91465637764b5f6
+      internalID: -947388148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Esquerda_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96aafca9491e1f4e0800000000000000
-      internalID: -1949529135306003863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Esquerda_2
+      name: Walk_Left_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 124bff4a7f17a7350800000000000000
-      internalID: 6015245560745800737
+      spriteID: 81da21207bd78104397cbd2cc2f4c526
+      internalID: -556057540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Esquerda_3
+      name: Walk_Left_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 04f9973f928484ca0800000000000000
-      internalID: -6032492355847086272
+      spriteID: 47b52d0ff4cf5a34db13348b81b9d5cd
+      internalID: 2033574770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Left_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a5fb2c479573c4ab5bf42ce990b2aa
+      internalID: -1961459852
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8fa8e9518f52cbc449bf8237272b8292
+    spriteID: 1f20ea35113b24e4d8bbc0e1f8f698c8
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle_Esquerda_0: -8588887924697410711
-      Idle_Esquerda_1: -1949529135306003863
-      Idle_Esquerda_2: 6015245560745800737
-      Idle_Esquerda_3: -6032492355847086272
+      Walk_Left_0: -947388148
+      Walk_Left_1: -556057540
+      Walk_Left_2: 2033574770
+      Walk_Left_3: -1961459852
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,10 +12,11 @@ public class scrLife : MonoBehaviour{
 
     public GameObject PlayerHP;
     private Slider HPBar;
+    public GameObject hpUI;
 
     private BlinkingSprite blink;
     public int Defesa;
-    public float D, Damage;
+    public float D, damage, totalDamage;
 
 
     // START
@@ -39,6 +40,8 @@ public class scrLife : MonoBehaviour{
         GameObject bar = Instantiate(PlayerHP, transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity, transform);
         HPBar = bar.GetComponentInChildren<Slider>();
         HPBar.gameObject.SetActive(false);
+        hpUI.gameObject.SetActive(false);
+        D=1f;
     }
 
     public void FixedUpdate()
@@ -49,12 +52,12 @@ public class scrLife : MonoBehaviour{
 
 
     // RECEBER DANO
-    public void ChangeHealth(int amount, scrEcoFather attackerEco){
+    public void ChangeHealth(float amount, scrEcoFather attackerEco){
         if (globalStatus == null || globalStatus.currentEco == null){
             return;
         }
 
-        D = 1f;
+        Debug.Log("D: "+D);
 
         Defesa = (int)globalStatus.defC;
 
@@ -64,20 +67,18 @@ public class scrLife : MonoBehaviour{
         globalStatus.currentEco.Element1,
         globalStatus.currentEco.Element2);
 
-        float damage = amount - (Defesa * D)/3;
+        damage = amount / (Defesa/10) *D;
+        damage = Mathf.Max(damage, 1);
+        totalDamage = Mathf.CeilToInt(damage)*effectiveness;
+        totalDamage = Mathf.Clamp(totalDamage, 1, Mathf.Infinity);
 
-        CurrentHealth -= Mathf.CeilToInt(damage)*effectiveness;
-
+        CurrentHealth -= totalDamage;
+        
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
 
 
         // Salva o HP no slot do Eco
         globalStatus.SaveCurrentEcoHealth(CurrentHealth);
-
-
-        /* if (HPTextAnim != null){
-            HPTextAnim.Play("HP_Animation");
-        } */
 
 
         UpdateHPText();
@@ -110,10 +111,12 @@ public class scrLife : MonoBehaviour{
     public void SetHealthBarVisible()
     {
         HPBar.gameObject.SetActive(true);
+        hpUI.gameObject.SetActive(true);
     }
 
     public void SetHealthBarInvisible()
     {
         HPBar.gameObject.SetActive(false);
+        hpUI.gameObject.SetActive(false);
     }
 }

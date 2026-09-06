@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: bc6b83ddf6c184e4fbc6eea6b3bd2cbf
+guid: 5d17fc1b72e2e3d4a917c5a2e547a764
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4196827833735184153
-    second: Idle_Direita_0
+      213: -3079488847413475042
+    second: Asol_idle_direita1_0
   - first:
-      213: -7104190692687571903
-    second: Idle_Direita_1
-  - first:
-      213: 5898375189603248828
-    second: Idle_Direita_2
-  - first:
-      213: -8364232046521178205
-    second: Idle_Direita_3
+      213: 401918440926620443
+    second: Asol_idle_direita1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,8 +77,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Direita_0
+      name: Asol_idle_direita1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,42 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e00eba225fd1c5c0800000000000000
-      internalID: -4196827833735184153
+      spriteID: e19842885357345d0800000000000000
+      internalID: -3079488847413475042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Direita_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14498b16438d86d90800000000000000
-      internalID: -7104190692687571903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Direita_2
+      name: Asol_idle_direita1_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 32
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cba6748ebfc3bd150800000000000000
-      internalID: 5898375189603248828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Direita_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a7aa20f4474ceb80800000000000000
-      internalID: -8364232046521178205
+      spriteID: b1b2c1c41b6e39500800000000000000
+      internalID: 401918440926620443
       vertices: []
       indices: 
       edges: []
@@ -200,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f0d6ce62246aba74da96b88ab07d514c
+    spriteID: 0e9ca499419895c4d99133784b0e52a0
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +160,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Idle_Direita_0: -4196827833735184153
-      Idle_Direita_1: -7104190692687571903
-      Idle_Direita_2: 5898375189603248828
-      Idle_Direita_3: -8364232046521178205
+      Asol_idle_direita1_0: -3079488847413475042
+      Asol_idle_direita1_1: 401918440926620443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

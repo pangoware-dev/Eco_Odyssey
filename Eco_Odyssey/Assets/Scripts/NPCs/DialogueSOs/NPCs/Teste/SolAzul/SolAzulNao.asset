@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10350a1b7d467784491ed0fb9c48c9f6, type: 3}
-  m_Name: SolAzulOi
+  m_Name: SolAzulNao
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   lines:
   - speaker: {fileID: 11400000, guid: 7de05702be1743d4c91e09edb76cd6fc, type: 2}
-    text: Oi eu sou a Sol Azul!
+    text: Tudo bem, vou esperar...
   options: []
   requiredNPCs: []
+  requiredLocations: []
+  isBattle: 0

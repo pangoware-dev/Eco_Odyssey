@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SolVerde
   m_EditorClassIdentifier: Assembly-CSharp::ActorSO
   actorName: Sol Verde
-  portrait: {fileID: 5354240762080026822, guid: c5c872d61ac56f547b66308ea0a66e12, type: 3}
+  portrait: {fileID: -420955551, guid: ff29a316ec0e8924491cd881b1383686, type: 3}

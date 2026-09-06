@@ -62,6 +62,7 @@ public class scrCaptureBar : MonoBehaviour
 
         Debug.Log("HP: " + enemyHealth.currentHP + " / " + enemyHealth.maxHP);
 
-        speed = (enemyHealth.currentHP * 100 / enemyHealth.maxHP)* 50;
+        speed = enemyHealth.currentHP * 100 / enemyHealth.maxHP * 50;
+        speed=Mathf.Clamp(speed, 100, 5000);
     }
 }

@@ -5,7 +5,9 @@ public class scrAnimationControl : MonoBehaviour
     [SerializeField] private bool isPlayer;
     private scrGlobalStatus globalStatus;
     public Transform attackPoint;
-    public int damage;
+    public float damage;
+    private int level;
+    private levelCheck levelCheck;
     public float weaponRange;
     public float knockbackForce = 10f;
     public LayerMask playerLayer;
@@ -23,6 +25,7 @@ public class scrAnimationControl : MonoBehaviour
     void Start()
     {
         globalStatus = GetComponent<scrGlobalStatus>();
+        levelCheck = GetComponent<levelCheck>();
         // Detecta automaticamente se é Player pela tag
         isPlayer = CompareTag("Player");
         // Encontra o AttackPoint se não foi atribuído
@@ -37,11 +40,6 @@ public class scrAnimationControl : MonoBehaviour
         
         ecoComp = GetComponent<scrEnemyEco>();
         anim = GetComponent<Animator>();
-
-        if (ecoComp != null && ecoComp.ecoData != null)
-        {
-            damage = (int)ecoComp.ecoData.Ataque;
-        }
     }
 
     private void Update()
@@ -56,12 +54,16 @@ public class scrAnimationControl : MonoBehaviour
 
     public void FixedUpdate()
     {
+
         if (gameObject.CompareTag("Player"))
         {
             if (globalStatus != null)
             {
                 Ataque = (int)globalStatus.atkC;
             }
+        } else if (gameObject.CompareTag("Enemy"))
+        {
+            damage = levelCheck.atk;
         }
     }
     
@@ -83,7 +85,6 @@ public class scrAnimationControl : MonoBehaviour
                     if (ecoComp != null && ecoComp.ecoData != null)
                     {
                         life.ChangeHealth(damage, ecoComp.ecoData);
-                        Debug.Log("Eco Inimigo: "+ecoComp.ecoData.name);
                     }
                 }
                 

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SolAzul
   m_EditorClassIdentifier: Assembly-CSharp::ActorSO
   actorName: Sol Azul
-  portrait: {fileID: 5354240762080026822, guid: c5c872d61ac56f547b66308ea0a66e12, type: 3}
+  portrait: {fileID: -983440811, guid: a787cef13e527a34abc7e6c167c09ebb, type: 3}
