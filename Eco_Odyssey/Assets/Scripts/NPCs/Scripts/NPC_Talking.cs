@@ -9,6 +9,7 @@ public class NPC_Talking : MonoBehaviour
     public Animator InteractAnim;
     public List<DialogueSO> conversations;
     public DialogueSO currentConversation;
+    public bool changeDialogue = false;
     private scrPlayer player;
     private NPC_Trainer currentTrainer;
 
@@ -27,6 +28,13 @@ public class NPC_Talking : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(currentConversation);
         } */
+    }
+
+    private void ChangeDialogueEnd()
+    {
+        if (changeDialogue == true){
+            Debug.Log("Mudou o diálogo do NPC: " + gameObject.name);
+        }
     }
 
     private void OnEnable()

@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
 
     private DialogueSO currentDialogue;
+    private ActorSO actorSO;
     public NPC_Trainer currentTrainer;
     private int dialogueIndex = 0;
 
@@ -233,6 +234,8 @@ public class DialogueManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         Time.timeScale = 1f;
+
+        //actorSO.ChangeDialogueEnd();
     }
 
     private void ClearChoices()

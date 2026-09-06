@@ -7,6 +7,7 @@ public class Interactables : MonoBehaviour
     public Animator InteractAnim;
     public DialogueSO currentConversation;
     public bool isInteractable = false;
+    public bool changeDialogue = false;
     public List<DialogueSO> conversations;
     private scrPlayer player;
 
@@ -45,6 +46,13 @@ public class Interactables : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void ChangeDialogueEnd()
+    {
+        if (changeDialogue == true){
+            Debug.Log("Mudou o diálogo do NPC: " + gameObject.name);
         }
     }
 

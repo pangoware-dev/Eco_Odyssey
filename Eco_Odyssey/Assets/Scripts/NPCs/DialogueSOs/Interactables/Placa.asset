@@ -14,8 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSO
   lines:
   - speaker: {fileID: 11400000, guid: af9f34e67d12eab40874a5eb126b157b, type: 2}
-    text: Eu sou uma placa!
+    text: 'Sul: Vila dos Hurricanos'
   - speaker: {fileID: 11400000, guid: c0d71f1534a4dcc468bbb9c8196e348f, type: 2}
-    text: ...
+    text: "\xC9 de onde eu vim!"
+  - speaker: {fileID: 11400000, guid: af9f34e67d12eab40874a5eb126b157b, type: 2}
+    text: 'Norte: Cidade Bigcity'
   - speaker: {fileID: 11400000, guid: c0d71f1534a4dcc468bbb9c8196e348f, type: 2}
-    text: "Definitivamente \xE9 uma placa comum..."
+    text: "E \xE9 pra l\xE1 que eu devo ir..."
+  - speaker: {fileID: 11400000, guid: c0d71f1534a4dcc468bbb9c8196e348f, type: 2}
+    text: Mas seria bom ter alguma ajuda antes de ir...
+  options: []
+  requiredNPCs: []
+  requiredLocations: []
+  isBattle: 0
