@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d1c047c908b04ea3ea15e58c03da4, type: 3}
   m_Name: Placa
   m_EditorClassIdentifier: Assembly-CSharp::ActorSO
-  actorName: Placa Comum
+  actorName: Placa
   portrait: {fileID: 21300000, guid: 90e368eca8ef27d4ea1130a499c7ee62, type: 3}

@@ -90,7 +90,6 @@ public class scrEHealth : MonoBehaviour{
         }else if (currentHP <= 0&&ecoComp.isTamed==false)
         {
             currentHP=1;
-            HPBar.gameObject.SetActive(false);
         }
         else if(currentHP <= 0&&ecoComp.isTamed==true)
         {

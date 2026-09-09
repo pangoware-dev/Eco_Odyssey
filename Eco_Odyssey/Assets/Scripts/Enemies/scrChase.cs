@@ -131,6 +131,7 @@ public class scrChase : MonoBehaviour
                     ChangeState(EnemyState.Moving);
                     health.SetHealthBarVisible();
                 }
+                playerDetectRange = 6.5f;
         }
 
         else

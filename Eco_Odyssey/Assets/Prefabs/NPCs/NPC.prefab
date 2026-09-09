@@ -264,7 +264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC_Talking
   InteractAnim: {fileID: 4290947357827569423}
-  dialogueSO: {fileID: 0}
+  conversations: []
+  currentConversation: {fileID: 0}
 --- !u!58 &2099865599032801479
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8871922128759142585, guid: 8f479f8b014adb24d8e7136b9230c368, type: 3}
+  m_Sprite: {fileID: -1319315142, guid: ff29a316ec0e8924491cd881b1383686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

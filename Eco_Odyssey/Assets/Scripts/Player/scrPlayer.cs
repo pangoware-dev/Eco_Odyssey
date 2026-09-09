@@ -14,6 +14,7 @@ public class scrPlayer : MonoBehaviour{
 
     public int PlayerMode = 0;
 
+    public float enemyDetectRange = 4.5f;
     public LayerMask enemyLayer;
 
     public scrAnimationControl ac;
@@ -158,16 +159,18 @@ public class scrPlayer : MonoBehaviour{
 
     // DETECTAR INIMIGO
    private void EnemyRange(){
-        Collider2D enemy = Physics2D.OverlapCircle(transform.position, 5f, enemyLayer);
+        Collider2D enemy = Physics2D.OverlapCircle(transform.position, enemyDetectRange, enemyLayer);
 
         if (enemy != null)
         {
             PlayerMode=1;
+            enemyDetectRange = 6.5f;
             //life.SetHealthBarVisible();
         }
         else
         {
             PlayerMode=0;
+            enemyDetectRange = 4.5f;
             //life.SetHealthBarInvisible();
         }
     }
